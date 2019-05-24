@@ -71,9 +71,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }
         Log.i(getClass().getName(), "messageType = "+messageType);
 
-        String contents = "";
+        String contents = null;
         if (remoteMessage.getData().get("contents") != null) {
             contents = remoteMessage.getData().get("contents");
+            Log.i(getClass().getName(), "notice contents="+contents);
         }
 
         Preference preference = new Preference(getApplicationContext());
@@ -128,8 +129,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 break;
             case NOTIFICATION_TYPE_NOTICE:
                 channelId = CommonUtil.CHANNEL_ID_NOTICE;
-                bundle.putString(CommonUtil.EXTRA_NOTICE_CONTENTS, contents);
                 intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                intent.setAction(CommonUtil.CLICK_ACTION_NOTICE);
+                if (contents != null) {
+                    bundle.putString(CommonUtil.EXTRA_NOTICE_CONTENTS, contents);
+                }
                 break;
             default:
                 intent = new Intent(getApplicationContext(), DashboardActivity.class);
