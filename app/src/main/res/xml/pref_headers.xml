@@ -1,0 +1,36 @@
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+<!--
+    <header
+        android:fragment="kr.co.gubed.habit2good.preference.SettingsActivity$NotificationPreferenceFragment"
+        android:icon="@drawable/outline_access_alarm_black_24dp"
+        android:title="@string/reminder_title"
+        android:summary="@string/reminder_summary"/>
+-->
+    <header
+        android:fragment="kr.co.gubed.habit2good.preference.SettingsActivity$BackupPreferenceFragment"
+        android:icon="@drawable/outline_cloud_upload_black_24dp"
+        android:title="@string/backup_title"
+        android:summary="@string/backup_summary"/>
+
+    <header
+        android:fragment="kr.co.gubed.habit2good.preference.SettingsActivity$QuotePreferenceFragment"
+        android:icon="@drawable/outline_supervisor_account_black_24dp"
+        android:title="@string/quote_title"
+        android:summary="@string/quote_summary"/>
+
+    <header
+        android:fragment="kr.co.gubed.habit2good.preference.SettingsActivity$GpointPreferenceFragment"
+        android:icon="@drawable/outline_monetization_on_black_24dp"
+        android:title="@string/gpoint_title"
+        android:summary="@string/gpoint_summary"/>
+
+    <header
+        android:fragment="kr.co.gubed.habit2good.preference.SettingsActivity$AboutPreferenceFragment"
+        android:icon="@drawable/outline_help_black_24dp"
+        android:title="@string/about_title"
+        android:summary="@string/about_summary"/>
+
+</preference-headers>

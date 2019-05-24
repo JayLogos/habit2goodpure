@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1stBackground"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/intLine1"
+        android:background="@color/color1stBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_scrollFlags="scroll|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/habits_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_1dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color1stBackground"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layer_my_gpoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_grey_300"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/mt20"
+                    android:paddingTop="@dimen/mt15"
+                    android:paddingRight="@dimen/mt20"
+                    android:paddingBottom="@dimen/mt15">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_gpoint21" />
+
+                        <TextView
+                            android:id="@+id/tv_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="사용자 님"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mt5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_my_gpoint"
+                            android:layout_width="@dimen/mt40"
+                            android:layout_height="@dimen/mt40"
+                            android:layout_marginRight="@dimen/mt10"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_gpoint25" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_my_gpoint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="0dp"
+                                android:text="00,000,000"
+                                android:textSize="@dimen/mt45" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mt10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_my_coin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 장"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_adviewwallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background">
+
+                    <com.tnkfactory.ad.BannerAdView
+                        android:id="@+id/banner_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50dp"
+                        android:layout_alignParentBottom="false"
+                        android:minHeight="@dimen/height_50dp" />
+                </RelativeLayout>
+
+                <!--<RelativeLayout
+                    android:id="@+id/adview_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color1stBackground"
+                    android:minHeight="50dp">
+
+                    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerHorizontal="true"
+                        ads:adSize="SMART_BANNER"
+                        ads:adUnitId="@string/banner_ad_unit_id_test"></com.google.android.gms.ads.AdView>
+                    &lt;!&ndash; android:layout_alignParentBottom="true" &ndash;&gt;
+
+                </RelativeLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/mt10"
+                    android:paddingTop="@dimen/default_margin"
+                    android:paddingRight="@dimen/mt10"
+                    android:paddingBottom="@dimen/mt10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_get_gold"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginRight="@dimen/mt5"
+                            android:layout_weight="1"
+                            android:background="@color/md_white_1000"
+                            android:elevation="@dimen/elevation_1dp"
+                            android:padding="@dimen/default_margin">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginRight="@dimen/mt5"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_gpoint25"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/title_get_gpoint"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mt5"
+                                    android:text="@string/title_get_gpoint_sub"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_gpoint25" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_partner"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="@dimen/mt5"
+                            android:layout_weight="1"
+                            android:background="@color/md_red_100"
+                            android:elevation="@dimen/elevation_1dp"
+                            android:padding="@dimen/default_margin">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/title_partner"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mt5"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/title_partner_sub1"
+                                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginLeft="@dimen/mt5"
+                                        android:layout_marginRight="@dimen/mt5"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_trophy_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/title_partner_sub1_desc"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="@color/text_red" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mt3"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/title_partner_sub2"
+                                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginLeft="@dimen/mt5"
+                                        android:layout_marginRight="@dimen/mt5"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/ic_gpoint25" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/title_partner_sub2_desc"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textColor="@color/text_red" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/friends1" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mt10"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_giftbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginRight="@dimen/mt5"
+                            android:layout_weight="1"
+                            android:background="@color/md_red_100"
+                            android:elevation="@dimen/elevation_1dp"
+                            android:padding="@dimen/default_margin">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/title_gift_box"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_gift_box_new"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="16dp"
+                                        android:layout_marginLeft="@dimen/mt5"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/btn_new1" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mt5"
+                                    android:text="@string/title_gift_box_sub"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/mybox1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_store"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="@dimen/mt5"
+                            android:layout_weight="1"
+                            android:background="@color/md_red_A100"
+                            android:elevation="@dimen/elevation_1dp"
+                            android:padding="@dimen/default_margin">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/title_store"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/md_white_1000"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mt5"
+                                    android:text="@string/title_store_sub"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/md_white_1000" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/shop1" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mt10"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/btn_event"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginRight="@dimen/mt5"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_round_btn"
+                            android:visibility="invisible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/title_event"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mt5"
+                                    android:text="@string/title_event_sub"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/event1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="@dimen/mt5"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_round_btn_trans">
+
+                            <ImageView
+                                android:id="@+id/iv_setting"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/setting1" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <!--
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/mt10"
+                        >
+                        <RelativeLayout
+                            android:id="@+id/btn_access"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/home_round_btn_trans"
+                            android:layout_marginLeft="@dimen/mt5"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/setting1"
+                                android:layout_centerInParent="true"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    -->
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include
+        layout="@layout/element_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+
+</LinearLayout>

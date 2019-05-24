@@ -1,0 +1,8 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="key_pref_gpoint_switch"
+        android:title="G.Point 설정" />
+
+</PreferenceScreen>

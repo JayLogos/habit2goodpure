@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_pointboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/intLine1"
+        android:background="@color/color1stBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_scrollFlags="scroll|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/habits_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_1dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color1stBackground"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <LinearLayout
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:background="@color/md_white_1000"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="@dimen/space_circle_menu_size"
+                        android:layout_height="@dimen/space_circle_menu_size"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/space_16dp"
+                        android:cropToPadding="false"
+                        android:src="@drawable/profile_default_image"
+                        app:civ_border_color="@color/md_grey_200"
+                        app:civ_border_width="@dimen/space_2dp"
+                        app:layout_constraintBottom_toTopOf="@id/divider5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="habit2good"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_nickname"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_nickname"
+                            android:layout_width="94dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:gravity="center"
+                            android:text="@string/my_nickname"
+                            android:textSize="@dimen/text_size_default"
+                            app:layout_constraintBottom_toBottomOf="@+id/iv_edit_profile"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_edit_profile"
+                            android:layout_width="@dimen/height_24dp"
+                            android:layout_height="@dimen/height_20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:srcCompat="@drawable/outline_create_black_18dp" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="96dp"
+                            android:layout_marginTop="12dp"
+                            android:text="아이디"
+                            android:textColor="@color/md_grey_500"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="96dp"
+                            android:layout_marginTop="12dp"
+                            android:text="닉네임"
+                            android:textColor="@color/md_grey_500"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color1stBackground"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_gpoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_margin"
+                        android:background="@color/md_white_1000"
+                        android:elevation="@dimen/elevation_1dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_ic_gpoint"
+                            android:layout_width="@dimen/image_width_40dp"
+                            android:layout_height="@dimen/image_height_40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/space_16dp"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_gpoint25" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="@dimen/elevation_1dp"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/space_16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_gpoint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/default_margin"
+                                    android:layout_marginTop="@dimen/default_margin"
+                                    android:layout_marginEnd="@dimen/default_margin"
+                                    android:layout_marginBottom="@dimen/space_4dp"
+                                    android:text="976,500"
+                                    android:textColor="@color/md_black_1000"
+                                    android:textSize="36sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="@string/scale_point"
+                                    android:textSize="@dimen/text_size_24sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/default_margin"
+                                    android:layout_marginTop="@dimen/default_margin"
+                                    android:layout_marginBottom="@dimen/default_margin"
+                                    android:text="@string/balance_display"
+                                    android:textColor="@color/md_blue_grey_700"
+                                    android:textSize="@dimen/text_size_16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/default_margin"
+                                    android:layout_marginTop="@dimen/space_4dp"
+                                    android:layout_marginEnd="@dimen/default_margin"
+                                    android:layout_marginBottom="@dimen/default_margin"
+                                    android:text="976,500"
+                                    android:textColor="@color/md_grey_700"
+                                    android:textSize="@dimen/text_size_24sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="@string/scale_point"
+                                    android:textColor="@color/md_blue_grey_700"
+                                    android:textSize="@dimen/text_size_16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_ranking_board"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/space_16dp"
+                                    android:layout_weight="@integer/intLine1"
+                                    android:gravity="right"
+                                    android:paddingEnd="@dimen/default_margin"
+                                    android:text="순위보기"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/md_white_1000"
+                        android:elevation="@dimen/elevation_1dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/space_16dp">
+
+                        <ImageView
+                            android:id="@+id/iv_ic_trophy"
+                            android:layout_width="@dimen/height_32dp"
+                            android:layout_height="@dimen/height_32dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/space_24dp"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_trophy_yellow" />
+
+                        <TextView
+                            android:id="@+id/tv_trophy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginTop="@dimen/space_16dp"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/space_16dp"
+                            android:text="250"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_trophy_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/scale_trophy"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_adviewwallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background">
+
+                        <com.tnkfactory.ad.BannerAdView
+                            android:id="@+id/banner_ad"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_50dp"
+                            android:layout_alignParentBottom="false"
+                            android:minHeight="@dimen/height_50dp" />
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout
+                        android:id="@+id/rl_adviewwallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background"
+                        android:minHeight="50dp">
+
+                        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/adViewWallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_centerHorizontal="true"
+                            ads:adSize="SMART_BANNER"
+                            ads:adUnitId="@string/banner_ad_unit_id_test"></com.google.android.gms.ads.AdView>
+                        &lt;!&ndash; android:layout_alignParentBottom="true" &ndash;&gt;
+                    </RelativeLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_demoDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color1stBackground"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:longClickable="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:layout_marginBottom="@dimen/default_margin"
+                        android:background="@color/md_white_1000"
+                        android:elevation="@dimen/elevation_1dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/default_margin"
+                        android:paddingTop="@dimen/space_4dp"
+                        android:paddingEnd="@dimen/default_margin"
+                        android:paddingBottom="@dimen/space_4dp">
+
+                        <TextView
+                            android:id="@+id/tv_my_gpoint_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:layout_weight="2"
+                            android:text="@string/level_0"
+                            android:textColor="@color/md_grey_500"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_my_gpoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:layout_weight="8"
+                            android:gravity="left"
+                            android:text="200 GP"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/md_white_1000"
+                        android:elevation="@dimen/elevation_1dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/default_margin"
+                        android:paddingTop="@dimen/space_4dp"
+                        android:paddingEnd="@dimen/default_margin"
+                        android:paddingBottom="@dimen/space_4dp">
+
+                        <TextView
+                            android:id="@+id/tv_partner_gpoint_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/default_margin"
+                            android:layout_weight="2"
+                            android:text="@string/partner_title"
+                            android:textColor="@color/md_grey_500"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_partner_gpoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:layout_weight="8"
+                            android:gravity="left"
+                            android:text="200 GP"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/md_white_1000"
+                        android:elevation="@dimen/elevation_1dp"
+                        android:stretchColumns="*">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tv_level1title"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/level_1"
+                                android:textSize="@dimen/mt18" />
+
+                            <TextView
+                                android:id="@+id/tv_level1count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:text="5 명"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_level1point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginEnd="@dimen/default_margin"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="end"
+                                android:text="250 GP"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tv_level2title"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/level_2"
+                                android:textSize="@dimen/mt18" />
+
+                            <TextView
+                                android:id="@+id/tv_level2count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:text="25 명"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_level2point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginEnd="@dimen/default_margin"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="end"
+                                android:text="1,250 GP"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tv_level3title"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/level_3"
+                                android:textSize="@dimen/mt18" />
+
+                            <TextView
+                                android:id="@+id/tv_level3count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:text="125 명"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_level3point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginEnd="@dimen/default_margin"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text="6,250 GP"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tv_level4title"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/level_4"
+                                android:textSize="@dimen/mt18" />
+
+                            <TextView
+                                android:id="@+id/tv_level4count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:text="625 명"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_level4point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginEnd="@dimen/default_margin"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="end"
+                                android:text="31,250 GP"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tv_level5title"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/level_5"
+                                android:textSize="@dimen/mt18" />
+
+                            <TextView
+                                android:id="@+id/tv_level5count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:text="3,125 명"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_level5point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginEnd="@dimen/default_margin"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="end"
+                                android:text="156,250 GP"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tv_level6title"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/level_6"
+                                android:textSize="@dimen/mt18" />
+
+                            <TextView
+                                android:id="@+id/tv_level6count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:text="15,625 명"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_level6point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/default_margin"
+                                android:layout_marginTop="@dimen/space_4dp"
+                                android:layout_marginEnd="@dimen/default_margin"
+                                android:layout_marginBottom="@dimen/space_4dp"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text="781,250 GP"
+                                android:textSize="@dimen/mt18"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:background="@color/md_white_1000"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/default_margin"
+                    android:paddingTop="@dimen/space_4dp"
+                    android:paddingEnd="@dimen/default_margin"
+                    android:paddingBottom="@dimen/space_4dp">
+
+                    <TextView
+                        android:id="@+id/tv_rating_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:layout_marginBottom="@dimen/default_margin"
+                        android:layout_weight="2"
+                        android:text="@string/rating_text"
+                        android:textColor="@color/md_grey_500"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_20dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/btn_review1" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include
+        layout="@layout/element_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</LinearLayout>

@@ -1,0 +1,811 @@
+<resources>
+    <string name="app_name">좋은습관 해빗투굿</string>
+
+    <string name="my_default_web_client_id" translatable="false">1035578351758-tqdabihakactunf7efrnac5gjtofblh4.apps.googleusercontent.com</string>
+
+    <string name="btn_nav_plus1">플러스원</string>
+    <string name="btn_nav_habits">내습관</string>
+    <string name="btn_nav_point">상점</string>
+    <string name="btn_nav_dashboard">내정보</string>
+
+    <string name="activity_ranking_board">GP 순위</string>
+    <string name="activity_edit_memo">메모 편집</string>
+
+    <string name="tab_text_1">습관</string>
+    <string name="tab_text_2">포인트몰</string>
+    <string name="tab_text_3">포인트보드</string>
+
+    <string name="action_settings">설정</string>
+    <string name="action_upload">클라우드에 업로드</string>
+    <string name="action_download">클라우드에서 다운로드</string>
+    <string name="action_faq">자주하는 질문</string>
+    <string name="action_refresh">새로고침</string>
+    <string name="action_my_wallet">내지갑</string>
+    <string name="action_help">고객지원</string>
+    <string name="action_homepage">홈페이지</string>
+    <string name="action_info">도움말</string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="habit_title">Habit Title</string>
+    <string name="date">2018.10.15</string>
+    <string name="iv_menu">Menu</string>
+    <string name="iv_reminder">ivReminder</string>
+    <string name="tv_streak">0</string>
+    <string name="tv_reminder">1</string>
+    <string name="tv_sunday">1</string>
+    <string name="tv_monday">2</string>
+    <string name="tv_tuesday">3</string>
+    <string name="tv_wednesday">4</string>
+    <string name="tv_thursday">5</string>
+    <string name="tv_friday">6</string>
+    <string name="tv_saturday">7</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to 1 Plus -->
+    <string name="gp_switch_desc">GP 적립하기를 해제하면 GP 보상이 되지 않습니다.\n보상받은 GP는 상점이나 내정보에서 확인할 수 있습니다. </string>
+    <string name="gp_switch_text">GP 적립하기</string>
+    <string name="gp_1plus_toast_msg">1 GP를 받았습니다.</string>
+
+    <!-- Strings related to Settings Headers -->
+    <string name="reminder_title">알림</string>
+    <string name="reminder_summary">알림음 및 진동</string>
+    <string name="backup_title">자동 백업</string>
+    <string name="backup_summary">클라우드 자동 백업 일정</string>
+    <string name="quote_title">해빗투굿 생각</string>
+    <string name="quote_summary">해빗투굿 생각 수신</string>
+    <string name="gpoint_title">G.Point</string>
+    <string name="gpoint_summary">Good Point</string>
+    <string name="about_title">해빗투굿 블로그</string>
+    <string name="about_uri">https://blog.naver.com/habit2good</string>
+    <string name="about_summary">About</string>
+    <string name="plus1_about_uri">https://blog.naver.com/habit2good/221532578829</string>
+    <string name="habit_about_uri">https://blog.naver.com/habit2good/221536274059</string>
+    <string name="habits_help_uri">https://blog.naver.com/habit2good/221453328501</string>
+    <string name="pointmall_about_uri">https://blog.naver.com/habit2good/221533279878</string>
+    <string name="dashboard_about_uri">https://blog.naver.com/habit2good/221533254770</string>
+    <string name="habit2good_uri">https://play.google.com/store/apps/details?id=kr.co.gubed.habit2good</string>
+
+    <!-- Strings related to 알림 Settings -->
+
+    <!-- Strings related to 자동백업 Settings -->
+    <string name="backup_schedule_title">자동 백업 시간</string>
+
+    <!-- Strings related to Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">사람은 습관을 만들고 습관은 사람을 만든다.</string>
+    <string name="nav_header_subtitle">서로 의견이 충돌할 때 화를 내는 것은 의미가 없다. 의견 충돌은 위협이 아니라 배우는 기회다. \n승자는 무엇인가를 배운 후 생각을 바꾼 사람이다.\n의견 충돌은 아직 개발되지 않은 잠재력의 거대한 원천이 된다.\n\n- 레이 달리오, ‘원칙’에서</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- Strings related to 해빗투굿 생각 dialog -->
+    <string name="ht_contents">사람은 습관을 만들고\n습관은 사람을 만든다.\n</string>
+    <string name="ht_author">무명</string>
+    <string name="ht_description">서로 의견이 충돌할 때 화를 내는 것은 의미가 없다. 의견 충돌은 위협이 아니라 배우는 기회다. \n승자는 무엇인가를 배운 후 생각을 바꾼 사람이다.\n의견 충돌은 아직 개발되지 않은 잠재력의 거대한 원천이 된다.\n\n- 레이 달리오, ‘원칙’에서</string>
+
+    <!-- Dialog -->
+    <string name="set">확인</string>
+    <string name="cancel">취소</string>
+    <string name="save">저장</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_partners_to_messages">Add partners to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- My Dashboard -->
+    <string name="my_nickname">없음</string>
+    <string name="check_nickname_btn">중복 확인</string>
+    <string name="name_of_mypoint">나의 포인트:</string>
+    <string name="default_mypoint">100,000</string>
+    <string name="scale_point">GP</string>
+    <string name="balance_display">잔액</string>
+    <string name="scale_trophy">트로피</string>
+    <string name="level_0">나의 실적</string>
+    <string name="partner_title">파트너 실적</string>
+    <string name="level_1">1레벨</string>
+    <string name="level_2">2레벨</string>
+    <string name="level_3">3레벨</string>
+    <string name="level_4">4레벨</string>
+    <string name="level_5">5레벨</string>
+    <string name="level_6">6레벨</string>
+
+    <string name="iv_numofok_desc">Number of OK</string>
+    <string name="iv_successratio_desc">success ratio</string>
+    <string name="img_event_tag_desc">event tag</string>
+    <string name="iv_down_desc">down button for expansion</string>
+    <string name="iv_reminder_desc">reminder icon</string>
+    <string name="iv_up_desc">up button for folding</string>
+
+    <!-- activity_habit_item_settings.xml -->
+    <string name="goal_img_description">목표를 시각화할 수 있는 사진을 등록하세요</string>
+    <string name="habit_name">* 습관명</string>
+    <string name="habit_name_hint">윗몸 일으키기 하루 100개</string>
+    <string name="habit_goal">* 목표 (구체적일수록 성공율이 높아집니다)</string>
+    <string name="habit_goal_hint">체지방율 30% 이하</string>
+    <string name="habit_signal">* 습관(반복적인 행동) 유발 신호</string>
+    <string name="habit_signal_hint">졸릴 때, TV 시청, 기상 전/후, 식 후</string>
+    <string name="habit_reward">* 습관(반복적인 행동)을 통해 얻는 보상</string>
+    <string name="habit_reward_hint">만족감, 건강미, 자신감</string>
+    <string name="habit_category">분류</string>
+    <string name="habit_action_plan">실행 일정</string>
+    <string name="habit_start_date">시작일</string>
+    <string name="habit_end_date">종료일</string>
+    <string name="habit_cycle">실행 주기</string>
+    <string name="habit_count">반복 횟수 (실천 가능한 수치로 시작해서 점점 늘려 주세요)</string>
+    <string name="habit_count_hint">100</string>
+    <string name="habit_unit">단위 (반복 횟수에 해당하는 단위를 입력하세요)</string>
+    <string name="habit_unit_hint">회</string>
+
+    <!-- reminder 관련 -->
+    <string name="alarm_time">알람 시간</string>
+    <string name="alarm_name">알람 이름</string>
+    <string name="alarm_name_hint">설정 안 함</string>
+    <string name="sunday">일</string>
+    <string name="monday">월</string>
+    <string name="tuesday">화</string>
+    <string name="wednesday">수</string>
+    <string name="thursday">목</string>
+    <string name="friday">금</string>
+    <string name="saturday">토</string>
+    <string name="repeated_day">요일 반복</string>
+
+    <!-- habit_item.xml 관련 -->
+    <string name="tilde">" ~ "</string>
+    <string name="success_ratio">100%</string>
+    <string name="my_goal">나의 목표</string>
+    <string name="signal">습관 유발 신호</string>
+    <string name="reward">습관을 통해 얻는 보상</string>
+    <string name="action_plan">목표를 이루기 위한 실행계획</string>
+
+    <!-- pie_view.xml 관련 -->
+    <string name="pie_view_result">21일중 20일 성공</string>
+    <string name="pie_view_schedule">2018.08.12~2018.09.06 (총 21회)</string>
+
+    <!-- intro_gtrophy_and_gpoint -->
+    <string name="ask_join_with_us">가입이 필요한 서비스 입니다.\n여기를 눌러 시작하세요.</string>
+
+    <!-- ranking board -->
+    <string name="hint_userid">ID를 입력하세요.</string>
+    <string name="title_ranking">순위</string>
+    <string name="title_userid">아이디</string>
+    <string name="title_gpoint_imsi">지포인트</string>
+    <string name="title_trophy_imsi">트로피</string>
+    <string name="ranking">1,000</string>
+    <string name="userid">shootinglikeme</string>
+    <string name="gpoint_imsi">1,000,000</string>
+    <string name="trophy_imsi">1000,000</string>
+    <string name="menu_mypostion">나의 순위</string>
+    <string name="menu_top">탑 랭커</string>
+    <string name="menu_search">검색</string>
+
+    <!-- Drawable Navigation Menu -->
+    <string name="nav_all">전체보기</string>
+    <string name="nav_ongoing">진행중인 습관</string>
+    <string name="nav_expired">만료된 습관</string>
+    <string name="nav_walkthrough">해빗투굿 가이드</string>
+    <string name="nav_settings">설정</string>
+    <string name="nav_share">파트너 초대</string>
+    <string name="nav_send">고객지원</string>
+
+    <!-- timecash -->
+    <string name="app_names">좋은습관 해빗투굿</string>
+    <string name="app_names_desc">해빗투굿 접근성 설정을 활성화해주세요.</string>
+
+    <string name="support_mail">habit2good@gmail.com</string>
+
+    <string name="title_get_gpoint">바로 적립</string>
+    <string name="title_get_gpoint_sub">바로 적립 가능한\n다양한 광고</string>
+    <string name="title_partner">파트너 초대</string>
+    <string name="title_partner_sub1">가입</string>
+    <string name="title_partner_sub1_desc">+100 GP</string>
+    <string name="title_partner_sub2">적립</string>
+    <string name="title_partner_sub2_desc">+5<![CDATA[%]]> GP</string>
+    <string name="title_event">이벤트</string>
+    <string name="title_event_sub">행운과 함께, 풍성한 혜택</string>
+    <string name="title_store">상점</string>
+    <string name="title_store_sub">적립 지포인트로 상품 구매</string>
+    <string name="title_gift_box">보관함</string>
+    <string name="title_gift_box_sub">구매 상품, 받은 경품 보관</string>
+    <string name="title_setting">설정</string>
+    <string name="username">%1$s 님</string>
+    <string name="limit_store">상품 구매는 월 무제한! 마음껏 질러 주세요!!</string>
+    <string name="mine_gpoint">보유 지포인트</string>
+    <string name="mine_trophy">보유 트로피</string>
+    <string name="mine_trophy_desc">보유 트로피이란 가나다라마바사</string>
+    <string name="trophy_cnt"> 개</string>
+
+    <string name="balance_gpoint">GP 잔액</string>
+
+    <string name="partner_cnt">내 파트너 %1$s명</string>
+    <string name="partner_gpoint">파트너 적립 누적 지포인트</string>
+    <string name="partner_desc">추천인 가입 시 100 GP가 지급 되고 \n파트너 적립 포인트의 5%(최대 30%)를 계속 지급 받습니다.</string>
+
+    <string name="setting_version">버전 : %1$s</string>
+
+    <string name="mission_desc">지포인트의 100% 적립, 추가로 파트너로부터 30% 적립</string>
+    <string name="mission_desc1">내가 쌓은 GP, 강해지는 파트너 라인</string>
+    <string name="mission_desc2"></string>
+
+    <string name="timegpoint_reward">지포인트 적립</string>
+    <string name="time_on">켜진 시간</string>
+    <string name="time_off">꺼진 시간</string>
+
+    <string name="get_reward">적립 확인</string>
+
+    <string name="icon_run">실행</string>
+    <string name="icon_down">다운로드</string>
+    <string name="icon_play">재생</string>
+    <string name="icon_like">좋아요</string>
+    <string name="icon_internet">인터넷</string>
+
+    <string name="init">서비스 동기화 중…</string>
+    <string name="init1">팁 : 친구가 충전소를 하면 나도 GP 적립~</string>
+    <string name="init2">팁 : USIM 바꾸기 전 설정에서 꼭!! \'휴대폰 변경\' 신청~</string>
+    <string name="loading">로딩중</string>
+
+    <string name="wallet">내 지갑</string>
+
+    <string name="buy_autogpoint1">구매시 다음과 같이 지포인트가 사용됩니다.</string>
+    <string name="buy_autogpoint2">구매하시겠습니까?</string>
+    <string name="buy_autogpoint_error">지포인트가 부족합니다. ㅜㅜ</string>
+
+    <string name="autogpoint_charge">간단적립 충전</string>
+
+    <string name="permission">해빗투굿 접근 권한 안내</string>
+    <string name="permission_desc">서비스 이용을 위한 필수적인 권한입니다.</string>
+    <string name="permission_t">필수적 접근 권한</string>
+    <string name="permission_t_1">저장공간</string>
+    <string name="permission_t_1_d">해빗투굿 앱 이미지 저장을 위해 필요합니다.</string>
+    <string name="permission_t_2">전화</string>
+    <string name="permission_t_2_d">해빗투굿 앱 광고 적립을 위해 필요합니다.</string>
+    <string name="permission_t_3">주소록</string>
+    <string name="permission_t_3_d">해빗투굿 앱 광고 제공을 위해 필요합니다.</string>
+
+
+    <!-- common -->
+    <string name="ok">예</string>
+    <string name="next">다음</string>
+    <string name="support">고객지원</string>
+    <string name="user">이용약관</string>
+    <string name="age_14">만 14세 이상 사용가능</string>
+    <string name="privacy">개인정보처리방침</string>
+    <string name="agree">동의합니다</string>
+    <string name="sign_out">탈퇴하기</string>
+    <string name="out">해빗투굿 탈퇴하기</string>
+    <string name="out_desc">해빗투굿을 탈퇴하시면, 가입 내역과 함께 보유하신 모든 포인트가 삭제 됩니다. 탈퇴를 진행하시겠습니까?</string>
+    <string name="out_result">탈퇴 완료</string>
+    <string name="out_result_desc">탈퇴처리가 완료되었습니다. 그동안 해빗투굿을 이용해 주셔서 감사합니다.</string>
+    <string name="version">버전</string>
+    <string name="gpoint">GP</string>
+    <string name="gpoint_txt">GP</string>
+    <string name="gpoint_need_txt">지포인트 더 필요</string>
+    <string name="pull_to_refresh">새로고침</string>
+    <string name="no_list">목록이 없습니다.</string>
+    <!--string name="cancel">취소</string-->
+    <string name="email">이메일</string>
+
+    <string name="setting">설정</string>
+    <string name="later">다음에</string>
+    <string name="exit">종료</string>
+    <string name="question">문의 내용을 선택해 주세요</string>
+    <string name="ist_not_supported">지원하지 않습니다.</string>
+    <string name="exittoback">종료하려면, 다시한번 버튼을 눌러 주세요</string>
+    <string name="market_review">플레이 스토어 리뷰</string>
+    <string name="market_review_desc">해빗투굿 사용이 어떠셨어요?\n저희를 위해 리뷰를 작성해 주시겠어요?\n지금 구글 플레이 스토어로 이동할까요?\n지금 마켓 리뷰에 별점 5개를 주시면 추가 적립금 5,000 GP를 드립니다.</string>
+    <string name="go_to_market">스토어로 이동</string>
+    <string name="okay">예</string>
+    <string name="sponsor">스페셜 \n(by %1$s)</string>
+
+    <string name="offer_adpopcorn">충전소(애드팝콘)</string>
+    <string name="offer_tnk">충전소(티엔케이)</string>
+    <string name="offer_nas">충전소(나스)</string>
+    <string name="offer_adsync">충전소(애드싱크)</string>
+    <string name="offer_buzzvill">충전소(버즈빌)</string>
+    <string name="offer_appall">충전소(앱올)</string>
+
+    <string name="usim_title">USIM 카드 오류</string>
+    <string name="usim_detail">해빗투굿은 중복 가입 처리 방지를 위해 USIM카드가 있는 단말기에서만 작동이 가능합니다.\n\nUSIM 카드가 제대로 삽입되어 있는지, 모바일 네트워크가 제대로 작동하는지 확인 후, 다시 해빗투굿를 실행 해 주시기 바랍니다.</string>
+    <string name="rooting">해빗투굿은 SIM 카드가 장착된 정상 안드로이드 디바이스에서만 작동됩니다. (루팅, 가상머신 불가!!)</string>
+    <!-- common -->
+
+    <!-- Login/Sign -->
+    <string name="signup">신규 가입하기</string>
+    <string name="login">로그인</string>
+    <string name="login_tv">로그인</string>
+    <string name="already_member">이미 가입하셨나요?</string>
+
+    <string name="id">아이디</string>
+    <string name="transfer_code">USIM 카드 변경 코드</string>
+    <string name="partner_code">추천인 아이디</string>
+    <string name="confirm">확인</string>
+
+    <string name="make_id">희망 아이디를 적어주세요</string>
+    <string name="import_id">영문, 숫자만 됩니다. (최소 4자 이상)</string>
+
+    <string name="input_id">아이디를 입력해 주세요</string>
+    <string name="input_transfer_code">USIM 카드 변경 코드를 입력해 주세요</string>
+    <string name="input_partner_code">추천인 아이디를 입력해 주세요</string>
+
+    <string name="error_id">4자 이상필요합니다. 다른 아이디를 입력해 주세요</string>
+    <string name="already_id">이미 등록된 아이디 입니다. 다른 아이디를 입력해 주세요</string>
+
+    <string name="recommend_id">추천 아이디 :</string>
+
+    <string name="import_partner"><![CDATA[추천인 아이디를 입력하지 않으면 무작위로 자동 지정됩니다.]]></string>
+
+    <string name="import_terms1">\'확인\'을 누르시면 다음 내용에 동의 하시는 걸로 할께요</string>
+    <string name="import_terms2">\'이용약관 <![CDATA[&]]> 개인정보보호\'</string>
+
+    <string name="login_error">로그인 오류!</string>
+    <string name="login_error_desc">로그인 중에 문제가 발생했습니다.\n데이터 네트워크가 제대로 작동하는지 확인 하시고, 다시 시도해 주세요~</string>
+
+    <string name="login_info">로그인 정보</string>
+    <string name="login_info_desc">해빗투굿는 아이디가 필요합니다.\n계속해서 \'로그인\'에 문제가 있으시면, \'고객 지원\'을 눌러 저희에게 연락 주세요</string>
+
+    <string name="congratulation">축하합니다!!</string>
+    <string name="congratulation_desc">해빗투굿에 가입해 주셔서 감사합니다.\n\n귀하의 아이디는 %1$s입니다.\해빗투굿 많이 사랑해 주세요~</string>
+
+    <string name="signup_error">신규가입 오류!</string>
+    <string name="signup_error_desc">신규가입 중에 문제가 발생했습니다.\n데이터 네트워크가 제대로 작동하는지 확인 하시고, 다시 시도해 주세요~</string>
+    <string name="try_again">다시 시도</string>
+    <string name="start_again">처음부터 다시</string>
+
+    <string name="no_partner">사용할수 없는 추천인 아이디입니다. 다시 확인해 주세요</string>
+    <string name="check_transfer">귀하의 \'USIM 카드 변경 코드\'를 입력해 주세요.\n입력하신 아이디가 핸드폰 정보와 일치하지 않습니다.</string>
+
+    <string name="invalid_transfer_code">잘못된 USIM 카드 변경 코드 입니다</string>
+
+    <string name="habit2good_update">해빗투굿 업데이트</string>
+    <string name="habit2good_update_desc">해빗투굿 새버전이 나왔어요!\n지금 업데이트 하세요</string>
+    <string name="habit2good_update_plz">해빗투굿 업데이트 후 이용가능!</string>
+    <string name="habit2good_update_reward">해빗투굿 업데이트 후 적립가능</string>
+
+    <string name="update_now">지금 업데이트</string>
+
+    <string name="update_toast">※앱 업데이트 필요※</string>
+
+    <string name="nomine">본인의 아이디를 추천인 아이디로 넣을 수 없습니다.</string>
+
+    <string name="user_error">로그인 오류</string>
+    <string name="user_error_desc">사용하는 USIM은 다음과 같은 사유로 로그인을 지원하지 않습니다.\n\'신규 가입\'을 통해서 새로 가입을 진행 해 주시기 바랍니다.\n - 3개월 이상 미사용\n - 해빗투굿 탈퇴\n - 부정 사용 등</string>
+
+    <!-- Login/Sign -->
+
+    <!-- Terms -->
+    <string name="terms_title">이용약관</string>
+
+    <!-- Home -->
+    <string name="cash_from_partners">파트너를 통한 지포인트</string>
+    <string name="invited_partners">초대된 파트너들</string>
+    <string name="partners_gpoint">파트너들 지포인트</string>
+
+    <string name="partners">파트너들</string>
+
+    <string name="invited_partners_import">파트너들로 부터 5<![CDATA["%"]]>까지 지포인트를 보너스로 계속 받아보세요~</string>
+    <string name="linked_app_for_cash_pop">타임 앱</string>
+
+    <string name="allow_app_access">사용정보 접근 허용</string>
+    <string name="allow_app_access_desc">해빗투굿 타임 앱 적립을 위해서는 \'사용정보 접근 허용\'에서 다음과 같이 \'사용추적 허용\'으로 설정해 주셔야 합니다.</string>
+
+    <string name="invite_partners_desc"><![CDATA[신규 가입을 통해 <font color="#00c853">트로피 100</font>개를 받으셨습니다.<br>\'친구 초대\'를 하면 친구들이 적립하는 포인트의 1단계 5% 부터 최대 6단계 30%까지 보너스로 계속 받으실 수 있어요~]]></string>    <!-- Home -->
+
+    <!-- History -->
+    <string name="history_title">내 금고 - 적립/사용 내역</string>
+    <string name="no_history">적립 내역 없음</string>
+    <string name="no_history_use">최근 30일 사용 내역 없음</string>
+
+    <string name="history_info_title">내 GP 적립 내역 정보</string>
+    <string name="history_info_detail">최근 30일 간의 내 GP 적립/사용 내역입니다. 적립이 누락되었거나, 문제가 있으시면 \'고객지원\'을 눌러 저희에게 연락해 주세요.</string>
+    <string name="footer_history">최근 30일</string>
+    <string name="footer_history_oneday">오늘</string>
+    <string name="next_month">14일 이내</string>
+    <string name="none">지급요청 :</string>
+    <string name="done">지급완료 :</string>
+    <string name="history_desc">적립 포인트의 유효기간 : 적립 후 1년</string>
+    <string name="request_deny">지급거부</string>
+    <string name="request_fail">지급실패</string>
+    <string name="request_return">환불</string>
+    <!-- History -->
+
+    <!-- Invite -->
+    <string name="invite_partners">파트너 초대</string>
+    <string name="invite_msg"><![CDATA[%1$s님께서 당신에게 [해빗투굿]을 추천하셨어요! 좋은 습관을 만들어 주는 [해빗투굿]!\n지금 바로 [해빗투굿]을 시작해 보세요~\n추천인 아이디 : [%2$s]를 입력하시면 추가 100 트로피가 바로 적립됩니다.\nhttps://play.google.com/store/apps/details?id=kr.co.gubed.habit2good]]></string>
+    <!-- Invite -->
+
+    <!-- Linked app manage -->
+    <string name="linked_app_manage">타임 앱 관리</string>
+    <string name="linked_apps">타임 앱</string>
+    <string name="linked_apps_desc">휴대폰에 설치 되어 있는 내 앱들 모두 기본으로 \'타임 앱\'으로 등록하였습니다.\n\'타임 앱\'설정은 언제든지 추가/삭제 하실 수 있어요</string>
+    <string name="m_app_title">타임 앱이란?</string>
+    <string name="m_app_desc">앱 누적 사용시간에 따라 타임앱라는 개념을 통해 포인트를 적립할 수 있는 앱을 말합니다.\n등록된 앱이 많을 수록 더 많은 포인트가 쌓이는건 당연하겠죠?\n새로 설치하시는 앱은 일단 타임앱으로 자동 등록 시켜 드려요</string>
+    <!-- Linked app manage -->
+
+    <!-- Cash pop -->
+    <string name="run_chk">실행</string>
+    <string name="confirm_chk">설치 확인</string>
+    <string name="install">설치</string>
+    <string name="install_run">설치+실행</string>
+    <string name="install_action">설치+수행</string>
+    <string name="visit">방문</string>
+    <string name="visit_action">방문+액션</string>
+    <string name="facebook_like">페이스북 좋아요</string>
+    <string name="habit2good_desc">60초 이상이면 해빗투굿 포인트를 얻을 수 있어요</string>
+    <string name="habit2good_sec">버튼을 눌러 적립하세요</string>
+    <string name="check_more">더 보기</string>
+    <string name="get_cash">당신의 스마트한 시간, 이제는 포인트!</string>
+    <string name="cheer_up">조금만 더 힘내시면 추가 포인트가~</string>
+    <string name="sec">초</string>
+    <string name="sec_txt">%1$s 초</string>
+    <string name="reward_gpoint_toast">+ %1$s 지포인트 적립완료</string>
+    <string name="reward_trophy_toast">+ %1$s 트로피 적립완료</string>
+    <string name="reward_toast">+ %1$s 포인트와 + %2$s 티켓이 적립되었습니다.</string>
+    <string name="toast_app_move">[간단적립 OFF] 앱 실행 후, 적립완료</string>
+
+    <string name="error_reward">포인트를 받지 못했어요 ㅠㅠ</string>
+    <string name="got_gold">획득 성공!</string>
+    <string name="check_gold">(상세내용은 \'내 금고\'내역에서 확인하세요~)</string>
+    <string name="offer_desc_tnk">[주의 사항]</string>
+    <string name="offer_desc_tnk1">본 충전소는 처음사용자만 적립 받을 수 있습니다. 이전에 설치 또는 참여했던 이력이 있으면, 삭제하거나 탈퇴하여도 적립 받을 수 없습니다.</string>
+    <string name="offer_desc_tnk2">충전소는 1회만 참여할 수 있으며, 광고 물량 소진 및 종료시에는 적립받을 수 없습니다.</string>
+    <string name="offer_desc_tnk3">반드시 제공되는 버튼을 눌러서 이동하시고, 24시간 이내에 앱설치 또는 액션을 완료하셔야 합니다.</string>
+    <string name="offer_desc_tnk4">적립 받지 못하신 경우에는 \'충전소(티엔케이)\'의 광고 목록 좌측 하단의 \'포인트 지급 관련 문의\'를 선택하셔서 문의해 주시기 바랍니다.</string>
+    <string name="offer_go">참여하기</string>
+    <string name="gold_wait">보너스 적립</string>
+    <string name="get_gold">적립 하기</string>
+    <string name="no_video_ad">현재 시청가능한 광고가 없습니다.\n나중에 다시 시도해주세요.</string>
+    <!-- Cash pop -->
+
+    <string name="cpi_desc">본 충전소는 처음사용자만 적립 받을 수 있습니다. 이전에 설치 또는 참여했던 이력이 있으면, 삭제하거나 탈퇴하여도 적립 받을수 없습니다.\n\n충전소는 1회만 참여할 수 있으며, 광고 물량 소진 및 종료시에는 적립받을 수 없습니다.\n\n반드시 제공되는 버튼을 눌러서 이동하시고, 24시간 이내에 앱 석치 확인을 완료하셔야 합니다.\n\n설치완료 후 설치 확인 버튼을 누르셔야 적립됩니다.</string>
+    <string name="no_ad">광고가 존재하지 않습니다</string>
+    <string name="already_ad">이미 참여한 이력이 있습니다</string>
+    <string name="chk_ad">설치 확인</string>
+
+    <!-- Purchase -->
+    <string name="phone_number">휴대전화 번호</string>
+    <string name="more_gold">지포인트가 부족합니다. ㅜㅜ</string>
+    <string name="not_enough_gold_title">지포인트가 부족합니다.</string>
+    <string name="not_enough_gold">상품 구매에 필요한 지포인트가 부족합니다. 지금 더 적립할까요?</string>
+    <string name="not_enough_gold_event">응모에 필요한 지포인트가 부족합니다. 지금 더 적립할까요?</string>
+    <string name="go_to_gold">지금 적립</string>
+    <string name="hold">아니오</string>
+    <string name="fcnt_chk">친구가 부족합니다.</string>
+    <string name="fcnt_chk_desc">상품 구매를 위해 %1$s명의 친구가 더 필요합니다.\n지금 친구를 초대 할까요?</string>
+    <string name="fcnt_cancel">아니오</string>
+    <string name="fcnt_invite">지금 초대</string>
+
+    <string name="not_enough_trophy_title">트로피가 부족합니다.</string>
+    <string name="not_enough_trophy">상품 구매에 필요한 트로피 부족합니다. 지금 더 적립할까요?</string>
+    <string name="not_enough_trophy_event">응모에 필요한 트로피가 부족합니다. 지금 더 적립할까요?</string>
+    <string name="event_go">%1$s 참여 가능합니다.</string>
+    <!-- Purchase -->
+
+    <!-- Setting -->
+    <string name="ad_pop_up">타임 팝업</string>
+    <string name="cash_pop_alarm">지포인트 알람</string>
+    <string name="linked_app_management">타임 앱 관리</string>
+    <string name="linked_app_management_import">타임 앱을 선택/해제 하세요</string>
+    <string name="my_profile">내 정보</string>
+    <string name="account_transfer">USIM 카드 변경</string>
+    <string name="account_transfer_desc">USIM 카드 변경 진행을 위해 유효한 이메일 주소를 적어주세요</string>
+    <string name="information_sent">정보가 전달 되었습니다</string>
+    <string name="information_sent_desc">이메일 내용을 확인 하시고, USIM 카드 변경 코드를 사용하여 새 단말기에 로그인 하세요</string>
+    <string name="account_transfer_import">USIM 카드 변경시 반드시 진행바랍니다.</string>
+    <string name="input_email">유효한 이메일 주소를 적어주세요</string>
+    <string name="invalid_email_address">사용할 수 없는 이메일 주소입니다</string>
+    <string name="logout">로그아웃</string>
+    <string name="notice">공지사항</string>
+    <string name="faq">도움말(FAQ)</string>
+    <string name="auto_logout">다른 핸드폰에 동일 아이디로 로그인 되었습니다.\n자동 로그아웃 됩니다</string>
+    <string name="auto_logout_no_user">로그인 아이디가 존재하지 않습니다.\n자동 로그아웃 됩니다</string>
+    <string name="no_user">로그인 정보가 맞지 않습니다.\n다시 확인 해 주세요</string>
+    <string name="new_txt">신규</string>
+    <string name="support_title">문의 유형을 선택해 주세요</string>
+    <string name="support_gpoint_reward">지포인트 적립</string>
+    <string name="support_store">상점 구매</string>
+    <string name="extra">기타</string>
+    <string name="question_close">문의취소</string>
+    <string name="close">닫기</string>
+    <string name="support_desc">고객 지원 업무시간 : 평일 오전 10시 ~ 오후 6시</string>
+    <string name="email_title_reward_problem">[지포인트 적립] - %1$s</string>
+    <string name="email_desc_reward_problem">신속하고 정확한 처리를 위해서 다음과 같은 정보가 필요합니다.\n다음 내용을 작성하신후 저희에게 메일을 보내 주세요\n\n[지포인트 적립 오류]\n\n1) 진행한 광고 이름 :\n2) 보상 지포인트 :\n3) \'적립 완료\'메시지가 포함된 스크린샷을 첨부해 주세요\n\n[사용자 정보]\n아이디 : %1$s\n앱버전 : %2$s\n기기모델 : %3$s</string>
+    <string name="email_title_store_problem">[상점 상품 구매] - %1$s</string>
+    <string name="email_desc_store_problem">신속하고 정확한 처리를 위해서 다음과 같은 정보가 필요합니다.\n다음 내용을 작성하신후 저희에게 메일을 보내 주세요\n\n[상품 구매 오류]\n\n1) 상품 이름 :\n2) 상품 가격 :\n3) 연락받으실 전화 번호 : \n4) 내 지포인트 정보가 포함된 \'상점\'화면의 스크린샷을 첨부해 주세요\n\n[사용자 정보]\n아이디 : %1$s\n앱버전 : %2$s\n기기모델 : %3$s</string>
+    <string name="email_title_etc">[기타] - %1$s</string>
+    <string name="email_desc_etc">문의하고 싶으신 내용을 자유롭게 작성해 주세요~\n\n\n\n[사용자 정보]\n아이디 : %1$s\n앱버전 : %2$s\n기기모델 : %3$s</string>
+    <string name="no_id">아이디 번호</string>
+    <string name="input_your_id">귀하의 아이디를 입력해 주세요</string>
+
+    <string name="email_chk">이메일 확인</string>
+    <string name="email_chk_desc">입력하신 이메일 %1$s으로 USIM 카드 변경을 위한 안내 메일이 발송됩니다.\n발송하시겠습니까?</string>
+
+    <string name="transferTitle">이메일 전송완료</string>
+    <string name="transferDesc">주의!!! (꼭 읽어 주세요!!!)\n\n자동로그아웃 후, 이전 USIM 카드로 로그인 하시면 처음부터 다시 진행 하셔야 합니다. (로그아웃 상태 유지)입력하신 이메일로 USIM 카드 변경을 위한 안내 메일이 발송되었습니다.\n내용을 확인하시고, USIM 카드 변경을 완료하시기 바랍니다.\n\n* 해빗투굿은 자동으로 로그아웃됩니다.</string>
+
+    <!-- Setting -->
+
+    <!-- My Profile -->
+    <string name="my_profile_nickname">닉네임</string>
+    <string name="my_redeem_code">내 추천인 아이디</string>
+    <string name="year_of_birth">출생연도</string>
+    <string name="area">지역</string>
+    <string name="gender">성별</string>
+    <string name="male">남자</string>
+    <string name="female">여자</string>
+    <string name="marriage">결혼</string>
+    <string name="single">미혼</string>
+    <string name="married">기혼</string>
+    <string name="update_success">업데이트 성공!</string>
+    <string name="update_fail">업데이트 실패ㅠㅠ</string>
+    <!-- My Profile -->
+
+    <!-- Guide -->
+    <string name="skip">건너띄기</string>
+    <string name="start">시작</string>
+    <!-- Guide -->
+
+    <string name="p_my_gpoint">내 보유 지포인트</string>
+    <string name="p_return_gpoint">환급 지포인트</string>
+    <string name="p_left_gpoint">신청 후 지포인트</string>
+
+    <string name="p_input_name">이름</string>
+
+    <string name="submit">신청하기</string>
+
+    <string name="desc_cash1"><![CDATA[환급 신청 후 환급금을 받기전에 계정 탈퇴를 하시면 환급이 되지 않습니다.]]></string>
+    <string name="desc_cash2"><![CDATA[신청하신 금액은 신청일 기준 최대 14일 이내에 순차적으로 지급됩니다.]]></string>
+    <string name="desc_cash3"><![CDATA[입력된 정보가 틀릴 경우, 예정 지급일 이후에 지급이 취소 되고, 해당 환급 포인트는 다시 복원 됩니다.]]></string>
+    <string name="desc_cash4"><![CDATA[출금액의 3.3"%"가 원천징수 후 정산됩니다.]]></string>
+    <string name="desc_cash5"><![CDATA[원천징수란"?" 소득금액 또는 수입금액을 지급할 때, 그 지급자가 그 지급받는 자가 부담할 세액을 미리 국가에 대신하여 징수하는 것.]]></string>
+
+    <string name="desc_gift1"><![CDATA[본 상품은 지급 후 환불이 되지 않습니다.]]></string>
+    <string name="desc_gift2"><![CDATA[본 상품은 컬쳐랜드 홈페이지에서만 사용할 수 있는 모바일 쿠폰 입니다.]]></string>
+    <string name="desc_gift3"><![CDATA[컬쳐랜드홈페이지 (<a href="""http://www.cultureland.co.kr"""><font color="#0000ff">www.cultureland.co.kr</font></a>)가입 후, 로그인"-">화면 우측 ‘컬쳐캐시 충전’ 클릭->바코드 하단의 핀번호 입력"-">충전하기"-">온라인 사용처에서 사용]]></string>
+    <string name="desc_gift4"><![CDATA[유효기간은 구매후 1,825일 이며, 이후에는 사용이 불가 합니다.]]></string>
+    <string name="desc_gift5"><![CDATA[환급 신청 후 환급금을 받기전에 계정 탈퇴를 하시면 환급이 되지 않습니다.]]></string>
+    <string name="desc_gift6"><![CDATA[신청하신 금액은 신청일 기준 최대 14일 이내에 순차적으로 지급됩니다.]]></string>
+
+    <string name="g_error_h">이름을 입력해주세요.</string>
+    <string name="g_error_n">이메일을 입력해주세요.</string>
+    <string name="g_error_b">휴대전화 번호를 입력해주세요.</string>
+
+    <string name="btn_yes">예</string>
+    <string name="btn_modify">수정 하기</string>
+
+    <string name="btn_confirm">확인</string>
+
+    <string name="error_network">네트워크 연결 오류</string>
+    <string name="error_network_desc">서버 연결에 실패하였습니다. 네크워크 연결 확인 후 다시 시도해 주시기 바랍니다.</string>
+
+    <string name="error_network_linked">인터넷 연결을 확인해 주세요.</string>
+
+    <string name="error_netword_include">네트워크 오류가 발생하였습니다.\n누락 포인트는 다음 적립 시 추가 됩니다.</string>
+
+    <string name="include_linked">(누락 포함)</string>
+
+    <string name="retry">재시도</string>
+
+    <string name="not_today">오늘 그만보기</string>
+    <string name="not_week">1주일간 보지않기</string>
+    <string name="not_show">다신 안보기</string>
+
+    <string name="exist_device">이미 해빗투굿에 등록된 USIM카드입니다.</string>
+
+    <string name="pay_gold">상품 가격(GP)</string>
+    <string name="list_linked">지포인트(GP)</string>
+    <string name="list_total">GP 총액</string>
+    <string name="balance">결제 후 잔액(GP)</string>
+    <string name="list_store">GP 사용 내역</string>
+
+    <string name="not_enough_normal_gold">지포인트(GP) 부족</string>
+
+    <string name="use_gold">(총 보유 지포인트 | %1$s)</string>
+
+    <!-- event -->
+    <string name="e_title">이벤트</string>
+    <string name="lottery_title">이벤트 참여</string>
+    <string name="lottery_desc">이벤트 응모시 다음과 같이 지포인트와 트로피가 사용됩니다.</string>
+    <string name="lottery_desc1">응모하시겠습니까?</string>
+    <string name="lottery_error1">필요 지포인트 또는 트로피가 부족합니다. ㅜㅜ</string>
+    <string name="lottery_error2">오늘 잔여 응모 횟수가 없습니다. ㅜㅜ</string>
+    <string name="lottery_error3">응모 가능한 이벤트가 없습니다.</string>
+    <string name="lottery_error4">이벤트의 모든 회차가 종료되었습니다.\n다음에 다시이용해주세요.</string>
+    <string name="lottery_error5">%1s시간 후 응모 가능합니다.</string>
+    <string name="lottery_today">오늘 응모 횟수 %1$s</string>
+    <string name="lottery_s">응모 가능</string>
+    <string name="lottery_msg">다음 응모 가능 시간까지 %1$s 남았습니다.</string>
+    <string name="lottery_hour"> %1$s시간</string>
+    <string name="lottery_min"> %1$s분</string>
+
+    <string name="lottery_reward">%1$s 이벤트 당첨확인을 해주세요.</string>
+
+    <string name="mileage">캐시백</string>
+    <string name="mileage_toast">%1$s GP(사용 GP %2$s) 캐시백!</string>
+    <!-- event -->
+
+    <!-- review -->
+    <string name="review_title">해빗투굿 개선 프로그램</string>
+    <string name="review_desc1">해빗투굿 잘 사용하고 계신가요? 이용자 분들의 의견을 통해 더 좋은 서비스를 제공하려고 합니다.</string>
+    <string name="review_desc2">잠시만 시간내서 평가해 주시겠어요?</string>
+    <string name="review_yes">넘 좋아요</string>
+    <string name="review_bad">조금 아쉬워요</string>
+    <string name="review_no">안 할래요;;</string>
+    <string name="review_b_desc1">궁금하진 점 있으시면 언제든지 ‘설정’ – ‘고객지원’을 통해서 언제든지 문의 해 주세요.</string>
+    <string name="review_b_desc2">본 개선 프로그램 안내는 한번만 나옵니다. ^^</string>
+    <string name="rating_text">앱 평가하기\n도움이 되셨다면 잠시 시간내서 평가해 주세요.\n많은 힘이 된답니다.</string>
+
+    <!-- cpi -->
+    <string name="cpi_end">종료 되었거나, 이전에 참여한 이력이 있습니다.</string>
+    <string name="cpi_confirm_go">설치 후, 꼭! 해빗투굿 내에서 [설치 확인]을 눌러 주셔야 적립 됩니다.</string>
+    <string name="cpi_confirm_try">설치가 되지 않았습니다. 설치 후 다시 해빗투굿 내에서 [설치 확인]을 눌러 주세요.</string>
+    <string name="cpi_confirm_sub">설치 완료 후, 해빗투굿 내에서 [설치 확인]을 누루셔야  적립이 완료 됩니다.</string>
+    <string name="cpi_confirm_desc1">설치 후 1시간 이내에 해빗투굿 내에서[설치 확인]을 하셔야 적립이 완료 되며, 보상이 지급됩니다.</string>
+    <string name="cpi_confirm_desc2">충전소를 완료 하지 않으시면 GP는 지급되지 않습니다.</string>
+    <string name="cpi_confirm_desc3">이전에 설치한 이력이 있거나, 다른 광고 서비스를 통해 참여하신 이력이 있으시면 보상되지 않습니다.</string>
+    <string name="cpi_confirm_desc4">종료되거나, 수량이 없을 경우에는 보상되지 않습니다.</string>
+    <string name="cpi_confirm_desc5">해빗투굿의 \'이용약관\'을 위반했을 경우, 보상은 이루어 지지 않습니다.</string>
+
+    <string name="cpi_run_go">설치 후, 꼭! 해빗투굿 내에서 [실행]을 눌러 주셔야 적립 됩니다.</string>
+    <string name="cpi_run_try">설치가 되지 않았습니다. 설치 후 다시 [실행]을 눌러 주세요.</string>
+    <string name="cpi_run_sub">설치 완료 후, 해빗투굿 내에서 [실행]을 누루셔야  적립이 완료 됩니다.</string>
+    <string name="cpi_run_desc1">설치 후 1시간 이내에 해빗투굿 내에서 [실행]을 하셔야 적립이 완료 되며, 보상이 지급됩니다.</string>
+    <string name="cpi_run_desc2">충전소를 완료 하지 않으시면 GP는 지급되지 않습니다.</string>
+    <string name="cpi_run_desc3">이전에 설치한 이력이 있거나, 다른 광고 서비스를 통해 참여하신 이력이 있으시면 보상되지 않습니다.</string>
+    <string name="cpi_run_desc4">종료되거나, 수량이 없을 경우에는 보상되지 않습니다.</string>
+    <string name="cpi_run_desc5">해빗투굿의 ‘이용약관＇을 위반했을 경우, 보상은 이루어 지지 않습니다.</string>
+    <string name="cpi_go">광고 참여</string>
+
+    <string name="every_day_run">매일 실행</string>
+    <string name="every_day_run_1">매일 실행 1분 이상</string>
+    <string name="time">회</string>
+    <string name="more_1m">1분 이상 실행 해야 적립 됩니다.</string>
+    <string name="check_install">설치가 되지 않았습니다. 설치 후 다시 해 주세요.</string>
+    <string name="already_today">오늘 이미 참여 하셨습니다.</string>
+    <!-- cpi -->
+
+    <!-- my_gift_box -->
+    <string name="no_gift">수신된 상품이 없습니다.</string>
+    <!-- my_gift_box -->
+
+    <string name="send_confirm">확인</string>
+    <string name="screen_off">화면 OFF</string>
+
+    <string name="screen_on_title">폰 켜진 타임 GP 적립</string>
+    <string name="screen_off_title">폰 꺼진 타임 GP 적립</string>
+
+    <string name="screen_desc">타임 GP 1회 최대 : %1$s GP</string>
+    <string name="screen_text">이전 핸드폰 화면 켜진시간보다,\n화면 꺼진 시간이 길면\타임 GP를 드립니다.</string>
+
+    <string name="error_occurrerd">에러가 발생되었습니다</string>
+    <string name="limit_text">* 상점 구매 가능 금액은 무제한.</string>
+
+    <string name="advertise">광고</string>
+
+    <string name="error_store_fail">구매실패</string>
+    <string name="error_store">어머나! 다시 구매해주세요.</string>
+
+    <string name="permission_title">해빗투굿 권한 설정</string>
+    <string name="permission_go_desc">서비스 이용을 위한 필수 권한을 동의해 주세요</string>
+    <string name="permission_go">권한 설정하러 가기</string>
+
+    <string name="notice_top">
+    <![CDATA[
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1, user-scalable=no\">
+        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
+        <title>Notice</title>
+        <link rel=\"stylesheet\" href=\"file:///android_asset/style.css?91\" type=\"text/css\" />
+        <script src=\"file:///android_asset/jquery-3.1.1.min.js\" type=\"text/javascript\"></script>
+    </head>
+    <body>
+    <div id=wrap><ul id=listview>
+    ]]>
+    </string>
+    <string name="notice_bottom">
+        <![CDATA[
+        </ul></div>
+    </body></html>
+    ]]>
+    </string>
+
+    <string name="notice_pop_top">
+    <![CDATA[
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1, user-scalable=no\">
+        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
+        <title>Notice</title>
+        <link rel=\"stylesheet\" href=\"file:///android_asset/notice_pop.css?37\" type=\"text/css\" />
+        <script src=\"file:///android_asset/jquery-3.1.1.min.js\" type=\"text/javascript\"></script>
+    </head>
+    <body>
+    <div id=wrap>
+    ]]>
+    </string>
+
+    <string name="notice_pop_bottom">
+        <![CDATA[
+        </div>
+    </body></html>
+    ]]>
+    </string>
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-7935254117249497/9710562231</string>
+    <string name="interstitial_ad_unit_id_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7935254117249497/7748188460</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="preview_image_desc">이미지 미리보기</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_my_position"
+        android:checkable="true"
+        android:icon="@drawable/outline_near_me_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/menu_mypostion"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_top"
+        android:checkable="true"
+        android:icon="@drawable/outline_filter_1_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/menu_top"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_search"
+        android:checkable="true"
+        android:icon="@drawable/outline_search_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+</menu>

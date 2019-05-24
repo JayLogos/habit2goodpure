@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="false" android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/btn_sign_join" />
+            <padding android:bottom="15dp" android:left="15dp" android:right="15dp" android:top="15dp" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true" android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/btn_sign_join_press" />
+            <padding android:bottom="15dp" android:left="15dp" android:right="15dp" android:top="15dp" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/btn_sign_join_dis" />
+            <padding android:bottom="15dp" android:left="15dp" android:right="15dp" android:top="15dp" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+</selector>

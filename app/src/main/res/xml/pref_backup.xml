@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="key_pref_autobackup"
+        android:title="자동 백업"
+        android:summaryOff="자동 백업을 수행하지 않습니다."/>
+
+    <kr.co.gubed.habit2good.preference.TimePickerPreference
+        android:key="key_pref_timepicker_autobackup"
+        android:title="@string/backup_schedule_title"
+        android:dependency="key_pref_autobackup"
+        android:defaultValue="2:0"/>
+
+</PreferenceScreen>

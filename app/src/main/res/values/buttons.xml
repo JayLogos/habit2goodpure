@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/outline_done_white_24</item>
+        <item>@drawable/outline_remove_circle_outline_white_24</item>
+        <item>@drawable/outline_skip_next_white_24</item>
+        <item>@drawable/outline_delete_forever_white_24</item>
+        <item>@drawable/outline_rate_review_white_24</item>
+    </array>
+    <array name="colors">
+        <item>@android:color/holo_green_light</item>
+        <item>@android:color/holo_red_dark</item>
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/darker_gray</item>
+        <item>@android:color/holo_orange_light</item>
+    </array>
+</resources>

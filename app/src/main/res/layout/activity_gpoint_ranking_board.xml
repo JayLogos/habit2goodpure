@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/intLine1"
+        android:background="@color/color1stBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_scrollFlags="scroll|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_1dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/reply_blue_800"
+            android:elevation="@dimen/elevation_1dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:visibility="gone">
+
+
+            <Spinner
+                android:id="@+id/spinner_table_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:theme="@style/ThemeSpinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/reply_blue_700"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/default_margin"
+                android:paddingBottom="@dimen/default_margin"
+                app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <TextView
+                    android:id="@+id/tv_ranking_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/title_ranking"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_userid_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/title_userid"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_my_gpoint_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_gpoint_imsi"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_trophy_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_trophy_imsi"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_grey_200"
+                    android:scrollbars="vertical">
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

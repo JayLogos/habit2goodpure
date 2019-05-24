@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('google-api-services-drive-v3-rev126-1.24.1.jar'))

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/background_light"
+        android:elevation="2dp"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+-->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/circle_image"
+                android:layout_width="@dimen/space_circle_menu_size"
+                android:layout_height="@dimen/space_circle_menu_size"
+                android:src="@drawable/ic_habit2good_512"
+                app:civ_border_width="@dimen/space_2dp"
+                app:civ_border_color="@color/md_grey_200"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:cropToPadding="false"
+                app:layout_constraintBottom_toTopOf="@id/divider5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="@dimen/img_description_width"
+                android:layout_height="@dimen/img_description_height"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:text="@string/goal_img_description"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_habitName"
+                app:layout_constraintStart_toEndOf="@+id/circle_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.701"
+                tools:ignore="SmallSp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_0dp"
+                android:layout_margin="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/space_16dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circle_image" />
+
+            <TextView
+                android:id="@+id/tv_habitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="@string/habit_name"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+
+            <EditText
+                android:id="@+id/et_habitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_24dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:hint="@string/habit_name_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="30"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitName" />
+
+            <TextView
+                android:id="@+id/tv_habitGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_goal"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_habitName" />
+
+            <EditText
+                android:id="@+id/et_habitGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_24dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:hint="@string/habit_goal_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="100"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitGoal" />
+
+
+            <TextView
+                android:id="@+id/tv_habitSignal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_signal"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_habitGoal" />
+
+            <EditText
+                android:id="@+id/et_habitSignal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:hint="@string/habit_signal_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="100"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitSignal" />
+
+            <TextView
+                android:id="@+id/tv_habitReward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_reward"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_habitSignal" />
+
+            <EditText
+                android:id="@+id/et_habitReward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_24dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:hint="@string/habit_reward_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="100"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitReward" />
+
+            <TextView
+                android:id="@+id/tv_habitCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_category"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_habitReward"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/spn_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/space_24dp"
+                android:entries="@array/category"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitCategory"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_actionplan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_action_plan"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn_category" />
+
+            <Button
+                android:id="@+id/btn_habitSdate"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_24dp"
+                android:layout_weight="1"
+                android:text="@string/habit_start_date"
+                android:textColor="@color/md_grey_600"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_actionplan" />
+
+            <TextView
+                android:id="@+id/tv_tilde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="~"
+                android:textIsSelectable="false"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_habitEdate"
+                app:layout_constraintStart_toEndOf="@+id/btn_habitSdate"
+                app:layout_constraintTop_toTopOf="@+id/btn_habitEdate" />
+
+            <Button
+                android:id="@+id/btn_habitEdate"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@string/habit_end_date"
+                android:textColor="@color/md_grey_600"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintStart_toEndOf="@+id/tv_tilde"
+                app:layout_constraintTop_toBottomOf="@+id/tv_actionplan" />
+
+            <TextView
+                android:id="@+id/tv_habitCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_cycle"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_habitSdate" />
+
+            <Spinner
+                android:id="@+id/spn_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/space_24dp"
+                android:entries="@array/cycle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitCycle" />
+
+            <TextView
+                android:id="@+id/tv_habitCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/space_16dp"
+                android:text="@string/habit_count"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spn_cycle" />
+
+            <EditText
+                android:id="@+id/et_habitCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:hint="@string/habit_count_hint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="9"
+                android:selectAllOnFocus="true"
+                android:text="@string/habit_count_hint"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitCount" />
+
+            <TextView
+                android:id="@+id/tv_habitUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/habit_unit"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_habitCount" />
+
+            <EditText
+                android:id="@+id/et_habitUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="100"
+                android:selectAllOnFocus="true"
+                android:text="@string/habit_unit_hint"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_habitUnit" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

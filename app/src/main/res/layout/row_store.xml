@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/iv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_80" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/store_title"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <TextView
+                        android:id="@+id/tv_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:text="구글 기프트카드"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_yello"
+                android:layout_alignParentLeft="true"
+                android:text="5% 캐시백"
+                android:textColor="@color/text_default"
+                android:paddingTop="@dimen/mt3"
+                android:paddingBottom="@dimen/mt3"
+                android:paddingLeft="@dimen/mt10"
+                android:paddingRight="@dimen/mt10"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12dp"
+                android:layout_marginBottom="@dimen/mt5"
+                android:layout_centerVertical="true"
+                />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/mt10"
+            android:paddingLeft="@dimen/mt10"
+            android:paddingBottom="@dimen/mt5"
+            android:paddingTop="@dimen/mt5"
+            android:gravity="right|center_vertical"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_gpoint25"
+                android:layout_marginRight="@dimen/mt5"
+                />
+            <TextView
+                android:id="@+id/tv_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="-00,000,000"
+                android:textColor="@color/text_red"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

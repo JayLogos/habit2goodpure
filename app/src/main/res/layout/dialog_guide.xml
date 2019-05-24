@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin">
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_guide"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/text_default" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            >
+            <Button
+                android:id="@+id/page1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/guide_page"
+                android:layout_marginRight="@dimen/mt5"
+                />
+            <Button
+                android:id="@+id/page2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/guide_page"
+                android:layout_marginRight="@dimen/mt5"
+                />
+            <Button
+                android:id="@+id/page3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/guide_page"
+                android:layout_marginRight="@dimen/mt5"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/mt10"
+            android:background="@android:color/transparent"
+            android:text="skip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_default" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="kr.co.gubed.habit2good.HabitsActivity">
+
+    <item
+        android:id="@+id/action_refresh"
+        android:checkable="true"
+        android:icon="@drawable/outline_refresh_white_24dp"
+        android:title="새로고침"
+        app:showAsAction="ifRoom" />
+
+    <group
+        android:id="@+id/display"
+        android:checkableBehavior="single"
+        android:enabled="true">
+        <item
+            android:id="@+id/nav_all"
+            android:checked="true"
+            android:icon="@drawable/outline_brightness_auto_black_18dp"
+            android:title="@string/nav_all" />
+        <item
+            android:id="@+id/nav_ongoing"
+            android:icon="@drawable/baseline_play_circle_outline_black_18dp"
+            android:title="@string/nav_ongoing" />
+        <item
+            android:id="@+id/nav_expired"
+            android:icon="@drawable/outline_check_circle_black_18dp"
+            android:title="@string/nav_expired" />
+    </group>
+
+    <item android:title="저장하기">
+        <menu>
+            <item
+                android:id="@+id/action_backup"
+                android:icon="@drawable/outline_cloud_upload_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_upload"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_restore"
+                android:icon="@drawable/outline_cloud_download_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_download"
+                app:showAsAction="never" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/action_info"
+        android:checkable="false"
+        android:icon="@drawable/outline_info_white_24dp"
+        android:title="@string/action_info"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RingtonePreference
+        android:defaultValue="content://settings/system/notification_sound"
+        android:key="key_pref_ringtone"
+        android:ringtoneType="notification"
+        android:title="알림 소리" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="key_pref_vibrate"
+        android:title="진동"
+        android:summaryOff="진동이 울리지 않습니다."/>
+</PreferenceScreen>

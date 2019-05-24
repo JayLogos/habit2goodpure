@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "kr.co.gubed.habit2good"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 48
+        versionName "1.1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { java.srcDirs = ['src/main/java', 'src/main/calendar'] } }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.google.com' }
+
+    maven {
+        url "https://dl.bintray.com/ironsource-mobile/android-sdk"
+    }
+    maven {
+        url 'https://dl.bintray.com/tonylee/maven/'
+    }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.github.shrikanth7698:Collapsible-Calendar-View-Android:v1.0.0'
+    implementation 'com.ramotion.circlemenu:circle-menu:0.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'gun0912.ted:tedpermission:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.zurche:plain-pie:v0.2.4'
+    implementation 'com.google.apis:google-api-services-drive:v3-rev130-1.25.0'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-drive:16.0.0'
+    implementation 'com.android.support:exifinterface:28.0.0'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+        transitive = true
+    }
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    /*implementation 'com.google.firebase:firebase-ads:17.1.1' */   // 2019.04.16 adsense 계정 정지로 TNK로 대체
+    implementation 'com.google.android.gms:play-services-analytics:16.0.5'
+    implementation files('libs/IgawCommon_v4.5.5a.jar')
+    implementation files('libs/IgawAdpopcorn_v5.1.7a.jar')
+    implementation files('libs/tnkad-sdk.jar')
+    implementation files('libs/tnkad-addon.jar')
+    implementation files('libs/libNASWall_20170302.jar')
+    implementation files('libs/libAppAllOfferwallSDK_401.jar')
+    implementation 'com.fpang:adsync2:5.2.7'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation files('libs/buzzad-1.0.7.jar')
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.github.lecho:hellocharts-android:v1.5.8'
+
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+}
+
+configurations {
+    all {
+        exclude module: 'httpclient'
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'

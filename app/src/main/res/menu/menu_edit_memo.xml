@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="kr.co.gubed.habit2good.HabitsActivity">
+
+    <item
+        android:id="@+id/action_edit"
+        android:checkable="false"
+        android:icon="@drawable/baseline_edit_white_24dp"
+        android:title="@string/action_help"
+        app:showAsAction="always" />
+</menu>

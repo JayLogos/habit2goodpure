@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="key_pref_quote_switch"
+        android:title="해빗투굿 생각 보기"
+        android:summaryOff="해빗투굿 생각 보기를 해제하였습니다."/>
+
+</PreferenceScreen>

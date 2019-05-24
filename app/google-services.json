@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "1035578351758",
+    "firebase_url": "https://habit2good-7908a.firebaseio.com",
+    "project_id": "habit2good-7908a",
+    "storage_bucket": "habit2good-7908a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035578351758:android:78b4b430246887c1",
+        "android_client_info": {
+          "package_name": "kr.co.gubed.habit2good"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035578351758-bhurn8ibmscr800imdkkosef2vlp2gbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.gubed.habit2good",
+            "certificate_hash": "c81c58d398dda65c2a83cd48738da68973dc8bb9"
+          }
+        },
+        {
+          "client_id": "1035578351758-bv3o0jklrabe722r8rs76q2v1ugn118l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.gubed.habit2good",
+            "certificate_hash": "6feb45eeae9af7f51e42fce275296bc474dbd9d4"
+          }
+        },
+        {
+          "client_id": "1035578351758-tqdabihakactunf7efrnac5gjtofblh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC932-w9f04W36q3aviYnKLkIaRo_gDCX8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035578351758-tqdabihakactunf7efrnac5gjtofblh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-7935254117249497~3267261242"
+    }
+  ],
+  "configuration_version": "1"
+}

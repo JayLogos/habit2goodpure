@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceScreen
+        android:title="알림"
+        android:summary="@string/reminder_summary">
+
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="ringtone_preference"
+            android:ringtoneType="notification"
+            android:title="알림 소리" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="vibrate_preference"
+            android:title="진동" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="자동 백업"
+        android:summary="@string/backup_summary">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_autobackup"
+            android:title="자동 백업" />
+
+        <kr.co.gubed.habit2good.preference.TimePickerPreference
+            android:key="timepicker_preference"
+            android:title="@string/backup_title"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="해빗투굿 생각"
+        android:summary="@string/quote_summary">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_preference_1"
+            android:title="해빗투굿 생각 보기" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="button_gpoint"
+        android:title="G.Point"
+        android:persistent="false">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_preference_1"
+            android:title="알림" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="button_quote"
+        android:title="About"
+        android:persistent="true">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_preference_1"
+            android:title="알림" />
+    </PreferenceScreen>
+</PreferenceScreen>

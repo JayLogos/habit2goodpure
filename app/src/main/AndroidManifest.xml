@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kr.co.gubed.habit2good">
+
+    <uses-sdk
+        tools:overrideLibrary="com.mopub.mobileads.native_static,com.mopub.mobileads.base,com.mopub.mobileads.rewarded_video,com.mopub.mobileads.interstitial,com.ironsource.mopubadapters"
+        />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-feature android:name="android.hardware.camera2" android:required="false" />
+
+    <application
+        android:name=".gpoint.util.Applications"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup"
+        android:icon="@drawable/ic_habit2good_512"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_habit2good_512"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7935254117249497~3267261242"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/app_name"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.habit2good.com/h2g” -->
+                <data android:scheme="http"
+                    android:host="www.habit2good.com"
+                    android:pathPrefix="/h2g" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="H2G_REWARD"/>
+                <action android:name="H2G_TROPHY"/>
+                <action android:name="H2G_PURCHASE"/>
+                <action android:name="H2G_GIFT"/>
+                <action android:name="H2G_GOODSAYING"/>
+                <action android:name="H2G_HABIT"/>
+                <action android:name="H2G_NOTICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--
+                <action android:name="HABIT_REWARD"/>
+                <action android:name="HABIT_INTENT"/>
+                <action android:name="HABIT_GIFT"/>
+                <action android:name="HABIT_EVENT_GO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                -->
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".HabitsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".PointmallActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".AddHabit"
+            android:parentActivityName=".HabitsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HabitsActivity" />
+        </activity>
+
+        <activity android:name=".UpdateHabitItem"
+            android:label="좋은 습관 수정하기"
+            android:parentActivityName=".HabitsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HabitsActivity" />
+        </activity>
+
+        <activity android:name=".HabitReminderActivity"
+            android:label="알람"
+            android:parentActivityName=".HabitsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HabitsActivity" />
+        </activity>
+
+        <activity android:name=".AddHabitReminder"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".HabitReminderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HabitReminderActivity" />
+        </activity>
+
+        <activity android:name=".UpdateHabitReminder"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".HabitReminderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HabitReminderActivity" />
+        </activity>
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="kr.co.gubed.habit2good"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".HabitMemoActivity"
+            android:label="메모"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".EditMemoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".preference.SettingsActivity"
+            android:label="설정"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+                <action android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".AutoDbBackupJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <activity android:name=".GpointRankingBoardActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="지포인트 순위"
+            android:parentActivityName=".DashboardActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
+
+        <!-- timecash -->
+        <activity android:name=".gpoint.activity.SignActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".gpoint.activity.SignJoinActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+        <activity android:name=".gpoint.activity.SignLoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
+        <!--
+        <activity
+            android:name=".activity.MainActivityTimeCash"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="habit"
+                    android:scheme="habit"
+                    />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="HABIT_REWARD"/>
+                <action android:name="HABIT_INTENT"/>
+                <action android:name="HABIT_GIFT"/>
+                <action android:name="HABIT_EVENT_GO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".gpoint.activity.MissionActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.StoreActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.SettingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.TermsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.PrivateActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.HistoryActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.InviteActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.ProfileActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.NoticeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".gpoint.activity.GiftBoxActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service android:name=".gpoint.service.MyFirebaseMessagingService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".gpoint.service.MyFirebaseInstanceIDService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".gpoint.service.EventNotiReceiver">
+            <intent-filter>
+                <action android:name="EVENTNOTI"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Used for Google Play Store Campaign Measurement-->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gms.analytics.CampaignTrackingService"
+            android:enabled="true"
+            android:exported="false"
+            />
+
+        <!-- adpopcorn -->
+        <meta-data android:name="igaworks_reward_server_type" android:value="server"/>
+        <meta-data android:name="igaworks_app_key" android:value="80583625" />
+        <meta-data android:name="igaworks_hash_key" android:value="bbdbb870e3f8437a" />
+
+        <activity android:name="com.igaworks.adpopcorn.activity.ApOfferWallActivity_NT"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.igaworks.adpopcorn.activity.ApVideoAdActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="landscape"/>
+        <!-- adpopcorn -->
+
+        <!-- tnkad -->
+        <meta-data android:name="tnkad_app_id" android:value="005000b0-60c1-26c5-5c62-1c06050a0602" />
+        <activity android:name="com.tnkfactory.ad.AdWallActivity" android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity android:name="com.tnkfactory.ad.AdMediaActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <!-- tnkad -->
+
+        <!-- nas -->
+        <meta-data android:name="naswall_app_key" android:value="2ed616bb7aad545f1bf149c0634187e2" />
+        <activity
+            android:name="com.nextapps.naswall.NASWallBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.nextapps.naswall.NASWall" android:configChanges="keyboardHidden|orientation" />
+        <!-- nas -->
+
+        <!-- adSync -->
+        <meta-data android:name="partner_id" android:value="01574-20180910-382"/>
+        <meta-data android:name="title_bar_color" android:value="#ff69b4"/>
+        <activity
+            android:name="com.fpang.lib.AdSyncList"
+            android:screenOrientation= "portrait"
+            android:theme="@style/AppTheme.AdSync"
+            />
+        <activity
+            android:name="com.fpang.lib.FreePangPang"
+            android:screenOrientation= "portrait"
+            android:theme="@style/AppTheme.AdSync"
+            />
+        <!-- adSync -->
+        <!-- applovin -->
+        <meta-data android:name="applovin.sdk.key"
+            android:value=""  />
+        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
+        <activity
+            android:name="com.applovin.adview.AppLovinInterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            />
+        <!-- applovin -->
+        <!-- moPub-->
+        <activity android:name="com.mopub.mobileads.MoPubActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.MraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.RewardedMraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <!-- moPub-->
+        <activity
+            android:name="com.mobvista.msdk.reward.player.MVRewardVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+        <activity
+            android:name="com.mocoplex.adlib.AdlibDialogActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
+
+        <activity android:name="com.mocoplex.adlib.AdlibVideoPlayer"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
+
+        <!-- Activity for BuzzAd -->
+        <activity
+            android:name="com.buzzvil.buzzad.sdk.OfferWallActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- appall -->
+        <activity
+            android:name="com.kyad.adlibrary.AppAllOfferwallActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="AppAllOfferwall" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1f689a7fedeeb97839ab838817f1bba7b9601bc8" />
+    </application>
+
+</manifest>

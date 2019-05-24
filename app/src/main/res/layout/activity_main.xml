@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1stBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/intLine1"
+        android:background="@color/color1stBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_scrollFlags="scroll|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/habits_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_1dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color1stBackground"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color1stBackground"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_8dp"
+                    android:background="@color/md_white_1000"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_attempt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:gravity="bottom|center_horizontal|center_vertical"
+                        android:text="1"
+                        android:textSize="@dimen/plus1_text_size"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_plus1"
+                        android:layout_width="@dimen/plus1_size"
+                        android:layout_height="@dimen/plus1_size"
+                        android:layout_gravity="center"
+                        android:elevation="@dimen/jump_elevation"
+                        app:srcCompat="@drawable/heart" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginBottom="@dimen/space_8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_remain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_remain_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_4dp"
+                            android:text="초"
+                            android:textSize="@dimen/text_size_12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_8dp"
+                    android:background="@color/md_white_1000"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_selected_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginTop="@dimen/space_8dp"
+                        android:text="2019.03.12"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:text="56"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_linechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginTop="@dimen/space_8dp"
+                        android:layout_marginEnd="@dimen/space_8dp"
+                        android:layout_marginBottom="@dimen/space_8dp"
+                        android:background="@color/md_white_1000"
+                        android:minHeight="50dp">
+
+                        <lecho.lib.hellocharts.view.LineChartView
+                            android:id="@+id/linechart"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/graph_period"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/dp100"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="일별" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="월별" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_8dp"
+                    android:background="@color/md_white_1000"
+                    android:elevation="@dimen/elevation_1dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8dp"
+                        android:layout_marginTop="@dimen/space_8dp"
+                        android:layout_marginEnd="@dimen/space_8dp"
+                        android:layout_marginBottom="@dimen/space_8dp"
+                        android:text="@string/gp_switch_desc"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_10sp" />
+
+                    <Switch
+                        android:id="@+id/adSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_16dp"
+                        android:layout_marginEnd="@dimen/space_16dp"
+                        android:layout_marginBottom="@dimen/space_8dp"
+                        android:checked="true"
+                        android:showText="false"
+                        android:text="@string/gp_switch_text"
+                        android:textOff="Off"
+                        android:textOn="On" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_adviewwallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:visibility="visible">
+
+        <com.tnkfactory.ad.BannerAdView
+            android:id="@+id/banner_ad"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50dp"
+            android:layout_alignParentBottom="false"
+            android:minHeight="@dimen/height_50dp" />
+
+        <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id_test"></com.google.android.gms.ads.AdView>-->
+        <!-- android:layout_alignParentBottom="true" -->
+    </RelativeLayout>
+
+    <include
+        layout="@layout/element_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</LinearLayout>
+

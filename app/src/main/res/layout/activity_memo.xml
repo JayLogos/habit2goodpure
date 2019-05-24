@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200"
+    android:orientation="vertical">
+<!--
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:background="@color/md_grey_200"
+        android:elevation="@dimen/elevation_1dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_margin"
+        android:paddingLeft="@dimen/space_16dp"
+        android:paddingRight="@dimen/space_16dp"
+        android:paddingTop="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/iv_goalimg"
+            android:layout_width="@dimen/image_goal_width"
+            android:layout_height="@dimen/image_goal_height"
+            android:background="@color/md_grey_200"
+            android:contentDescription="@string/habit_title" />
+
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/habit_name"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/md_grey_700"
+                    android:textSize="@dimen/text_size_10sp"
+                    android:textStyle="normal|italic"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ~ "
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/md_grey_700"
+                    android:textSize="@dimen/text_size_10sp"
+                    android:textStyle="normal|italic"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/tv_edate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/md_grey_700"
+                    android:textSize="@dimen/text_size_10sp"
+                    android:textStyle="normal|italic"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_grey_200"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

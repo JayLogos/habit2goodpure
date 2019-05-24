@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="@dimen/button_width_100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:background="?android:attr/colorBackground"
+                android:elevation="@dimen/zero_elevation"
+                android:text="@string/cancel"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="@dimen/button_width_100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:background="?android:attr/colorBackground"
+                android:elevation="@dimen/zero_elevation"
+                android:text="@string/save"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/tv_repeatedDay"
+                app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+            <TextView
+                android:id="@+id/tv_repeatedDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/repeated_day"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+            <LinearLayout
+                android:id="@+id/ll_repeatedDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/default_margin"
+                android:paddingStart="@dimen/default_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay">
+
+                <ToggleButton
+                    android:id="@+id/tb_sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textOff="@string/sunday"
+                    android:textOn="@string/sunday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+
+                <ToggleButton
+                    android:id="@+id/tb_monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textOff="@string/monday"
+                    android:textOn="@string/monday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/tb_sunday"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+
+                <ToggleButton
+                    android:id="@+id/tb_tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textOff="@string/tuesday"
+                    android:textOn="@string/tuesday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/tb_monday"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+
+                <ToggleButton
+                    android:id="@+id/tb_wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textOff="@string/wednesday"
+                    android:textOn="@string/wednesday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/tb_tuesday"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+
+                <ToggleButton
+                    android:id="@+id/tb_thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textOff="@string/thursday"
+                    android:textOn="@string/thursday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/tb_wednesday"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+
+                <ToggleButton
+                    android:id="@+id/tb_friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textOff="@string/friday"
+                    android:textOn="@string/friday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/tb_thursday"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+
+                <ToggleButton
+                    android:id="@+id/tb_saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginStart="@dimen/space_4dp"
+                    android:layout_weight="1"
+                    android:textOff="@string/saturday"
+                    android:textOn="@string/saturday"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/tb_friday"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_repeatedDay" />
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/ll_repeatedDay" />
+
+
+                <TextView
+                    android:id="@+id/tv_alarmTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:text="@string/alarm_name"
+                    app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+                <TextView
+                    android:id="@+id/tv_alarmName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/alarm_name_hint"
+                    android:textSize="@dimen/text_size_12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_alarmTitle" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/tv_alarmName" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>
