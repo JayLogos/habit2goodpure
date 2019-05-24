@@ -239,9 +239,13 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         Bundle extras = intent.getExtras();
         if (extras != null) {
             noticeContents = extras.getString(CommonUtil.EXTRA_NOTICE_CONTENTS);
-            Log.i(getClass().getName(), "noticeContents="+noticeContents);
-            Log.i(getClass().getName(), "noticeContents="+noticeContents);
-            Log.i(getClass().getName(), "noticeContents="+noticeContents);
+            if (noticeContents != null) {
+                Log.i(getClass().getName(), "noticeContents=" + noticeContents);
+
+                Intent intentNotification = new Intent(Intent.ACTION_VIEW, Uri.parse(noticeContents));
+                startActivity(intentNotification);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
         }
     }
 
