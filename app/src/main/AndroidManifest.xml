@@ -54,31 +54,30 @@
                     android:host="www.habit2good.com"
                     android:pathPrefix="/h2g" />
             </intent-filter>
-            <intent-filter>
-                <action android:name="H2G_REWARD"/>
-                <action android:name="H2G_TROPHY"/>
-                <action android:name="H2G_PURCHASE"/>
-                <action android:name="H2G_GIFT"/>
-                <action android:name="H2G_GOODSAYING"/>
-                <action android:name="H2G_HABIT"/>
-                <action android:name="H2G_NOTICE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <!--
-                <action android:name="HABIT_REWARD"/>
-                <action android:name="HABIT_INTENT"/>
-                <action android:name="HABIT_GIFT"/>
-                <action android:name="HABIT_EVENT_GO"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                -->
-            </intent-filter>
         </activity>
 
         <activity android:name=".HabitsActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="H2G_HABIT"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".PointmallActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="H2G_REWARD"/>
+                <action android:name="H2G_PURCHASE"/>
+                <action android:name="H2G_GIFT"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".DashboardActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="H2G_TROPHY"/>
+                <action android:name="H2G_GOODSAYING"/>
+                <action android:name="H2G_NOTICE"/>
+            </intent-filter>
+        </activity>
 
         <activity android:name=".AddHabit"
             android:parentActivityName=".HabitsActivity">
