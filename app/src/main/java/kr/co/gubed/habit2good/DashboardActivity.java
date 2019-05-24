@@ -240,6 +240,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         if (extras != null) {
             noticeContents = extras.getString(CommonUtil.EXTRA_NOTICE_CONTENTS);
             Log.i(getClass().getName(), "noticeContents="+noticeContents);
+            
         }
     }
 
