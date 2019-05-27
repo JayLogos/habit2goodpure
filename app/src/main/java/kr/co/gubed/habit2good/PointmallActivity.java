@@ -203,6 +203,7 @@ public class PointmallActivity extends BaseActivity
             Applications.preference.put(Preference.AD_ID, Long.toString(subscriberId));
         }
 
+        getGiftBoxFileCache();
         /*getNoticePopFileCache();
         getGiftBoxFileCache();
         getNoticeFileCache();*/
@@ -280,7 +281,7 @@ public class PointmallActivity extends BaseActivity
             //setGoldCoin(nowGold, nowCoin, "");
             if (Applications.isGiftBoxRe) {
                 Applications.isGiftBoxRe = false;
-                requestMyGift();
+                requestMyGift(true);
             }
         } catch (Exception ignore) {
 
@@ -382,6 +383,8 @@ public class PointmallActivity extends BaseActivity
             case R.id.action_refresh:
                 double balanceGpoint = Applications.ePreference.getBalanceGpoint();
                 tv_my_gpoint.setText(String.format("%,.0f", balanceGpoint));
+
+                requestMyGift(false);
                 break;
             case R.id.action_help:
                 CommonUtil.showSupport(this, true);
@@ -699,7 +702,7 @@ public class PointmallActivity extends BaseActivity
         }
     }
 
-    public void requestMyGift() {
+    public void requestMyGift(boolean isCondition) {
         boolean isCache = false;
         String cacheRst;
         if (giftboxFileCache.get(CommonUtil.giftboxCache) != null) {
@@ -712,7 +715,9 @@ public class PointmallActivity extends BaseActivity
                 cacheRst = new String(buffer);
                 Log.e(TAG, cacheRst);
                 JSONObject job = new JSONObject(cacheRst);
-                isCache = System.currentTimeMillis() - Long.parseLong(job.getString(CommonUtil.KEY_TIMESTAMP)) < 60 * 60 * 1000 * 2;
+                if (isCondition) {
+                    isCache = System.currentTimeMillis() - Long.parseLong(job.getString(CommonUtil.KEY_TIMESTAMP)) < 60 * 60 * 1000 * 2;
+                }
             } catch (Exception e) {
                 isCache = false;
                 e.printStackTrace();
@@ -1646,7 +1651,7 @@ public class PointmallActivity extends BaseActivity
                 goToMissionNoAnim();
                 Applications.isOfferWall = true;
                 //Applications.isReward = false;
-            } else if (getIntent != null && getIntent.getAction() != null && getIntent.getAction().equals("HABIT_GIFT")) {
+            } else if (getIntent != null && getIntent.getAction() != null && (getIntent.getAction().equals("HABIT_GIFT") || getIntent.getAction().equals(CommonUtil.CLICK_ACTION_PURCHASE))) {
                 //Applications.isReward = false;
                 try {
                     FileCacheFactory.initialize(this);
@@ -1661,7 +1666,7 @@ public class PointmallActivity extends BaseActivity
                 notificationManager.cancelAll();
                 setIntent(new Intent().setAction(null));
 
-                requestMyGift();
+                requestMyGift(false);
             } else {
                 //Applications.isReward = false;
                 if (!Applications.isStart) {
