@@ -243,7 +243,7 @@ public class Applications extends MultiDexApplication {
         try {
             if( refreshActivity != null && refreshActivity instanceof MainActivity) {
                 PointmallActivity pointmallActivity = new PointmallActivity();
-                pointmallActivity.requestMyGift();
+                pointmallActivity.requestMyGift(true);
             }
         }catch (Exception ignore){
             ignore.printStackTrace();
