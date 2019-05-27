@@ -520,6 +520,7 @@ public class HistoryActivity extends Activity implements AsyncTaskCompleteListen
                 onBackPressed();
                 break;
             case R.id.btn_info:
+                CommonUtil.showSupport(HistoryActivity.this, true);
                 tracker.send(new HitBuilders.EventBuilder().setCategory(analiticsCategory).setAction("/history_guide_button_click").build());
                 break;
             case R.id.listDetailClose:
