@@ -274,7 +274,8 @@
                                         android:layout_marginLeft="@dimen/mt5"
                                         android:layout_marginRight="@dimen/mt5"
                                         android:adjustViewBounds="true"
-                                        android:src="@drawable/ic_trophy_yellow" />
+                                        android:src="@drawable/ic_trophy_yellow"
+                                        android:visibility="invisible" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -303,7 +304,8 @@
                                         android:layout_marginLeft="@dimen/mt5"
                                         android:layout_marginRight="@dimen/mt5"
                                         android:adjustViewBounds="true"
-                                        android:src="@drawable/ic_gpoint25" />
+                                        android:src="@drawable/ic_gpoint25"
+                                        android:visibility="invisible" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
