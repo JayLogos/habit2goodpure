@@ -179,6 +179,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         if (Applications.preference.getValue(Preference.USER_ID, "").equals("")) {
             Intent intent = new Intent(getApplicationContext(), SignActivity.class);
             startActivity(intent);
+            finish();
         } else {
             Log.i(TAG, "user_id"+Applications.preference.getValue(Preference.USER_ID, ""));
         }
@@ -369,7 +370,9 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
     @Override
     protected void onStop() {
-        mNotificationSlider.stopAutoCycle();
+        if (mNotificationSlider != null) {
+            mNotificationSlider.stopAutoCycle();
+        }
         super.onStop();
     }
 
@@ -597,6 +600,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
                         Applications.preference.put(Preference.NOTI_SLIDE_4_LINK, slide4Link);
 
                         setHorizontalSlide();
+                        mNotificationSlider.movePrevPosition(false);
 
                         Applications.preference.put(Preference.PLUS1_TIMER, plus1Timer);
                         break;
@@ -880,6 +884,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
 
         //for(String name : file_maps.keySet()){
+        mNotificationSlider.removeAllSliders();
         for(String name : url_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
             // initialize a SliderLayout
@@ -901,7 +906,6 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         mNotificationSlider.setCustomAnimation(new DescriptionAnimation());
         mNotificationSlider.setDuration(4000);
         mNotificationSlider.addOnPageChangeListener(this);
-        mNotificationSlider.movePrevPosition(false);
     }
 
     private final View.OnClickListener onProfileImageSelectedListener = new View.OnClickListener() {
