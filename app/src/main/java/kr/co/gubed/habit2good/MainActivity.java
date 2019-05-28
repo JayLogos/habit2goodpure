@@ -181,7 +181,7 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
             AppGuidePopupShow();
 */
 
-            return;
+            finish();
         } else {
             Log.i(getClass().getName(), "user_id"+Applications.preference.getValue(Preference.USER_ID, ""));
             //view = getLayoutInflater().inflate(R.layout.activity_pointmall, null);
