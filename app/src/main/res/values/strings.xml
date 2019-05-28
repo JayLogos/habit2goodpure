@@ -257,6 +257,11 @@
     <string name="nav_share">파트너 초대</string>
     <string name="nav_send">고객지원</string>
 
+    <string name="notislide1_name">해빗투굿 생각</string>
+    <string name="notislide2_name">친구 초대 이벤트</string>
+    <string name="notislide3_name">습관은요...!</string>
+    <string name="notislide4_name">좋은 습관 만들기</string>
+
     <!-- timecash -->
     <string name="app_names">좋은습관 해빗투굿</string>
     <string name="app_names_desc">해빗투굿 접근성 설정을 활성화해주세요.</string>
