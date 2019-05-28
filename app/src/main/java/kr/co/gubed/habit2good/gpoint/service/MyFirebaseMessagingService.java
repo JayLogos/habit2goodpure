@@ -83,6 +83,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Applications.preference.put(CommonUtil.INTENT_TYPE_GOOD_SAYING, remoteMessage.getData().get("body"));
         }else if(messageType.equals("notice")) {
             sendNotification(remoteMessage.getData().get("title"), remoteMessage.getData().get("body"), messageType, contents);
+        }else if(messageType.equals("reward")) {
+            sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody(), messageType, contents);
         } else {
             if (preference.getValue(Preference.CASH_POP_ALARM, true)) {
                 sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody(), messageType, contents);
