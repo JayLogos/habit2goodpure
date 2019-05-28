@@ -60,6 +60,7 @@
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="H2G_HABIT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".PointmallActivity"
@@ -68,6 +69,7 @@
                 <action android:name="H2G_REWARD"/>
                 <action android:name="H2G_PURCHASE"/>
                 <action android:name="H2G_GIFT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".DashboardActivity"
@@ -76,6 +78,7 @@
                 <action android:name="H2G_TROPHY"/>
                 <action android:name="H2G_GOODSAYING"/>
                 <action android:name="H2G_NOTICE"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
