@@ -116,23 +116,22 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
     @Override
     public void onSliderClick(BaseSliderView slider) {
-        Toast.makeText(this,slider.getBundle().get("extra") + "",Toast.LENGTH_SHORT).show();
-        String slideName = slider.getBundle().get("extra").toString();
+        String slideName = slider.getBundle().getString("extra");
+        Toast.makeText(this,slideName + "",Toast.LENGTH_SHORT).show();
         Intent intent = null;
 
-        if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_1_NAME,""))) {
-            //intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_1_LINK, "")));
+        if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_1_NAME, getResources().getString(R.string.notislide1_name)))) {
             showGoodsayingDialog();
-        } else if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_2_NAME,""))){
-            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_2_LINK, "")));
+        } else if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_2_NAME,getResources().getString(R.string.notislide2_name)))){
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_2_LINK, "https://blog.naver.com/habit2good/221453138961")));
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        } else if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_3_NAME,""))){
-            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_3_LINK, "")));
+        } else if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_3_NAME,getResources().getString(R.string.notislide3_name)))){
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_3_LINK, "https://blog.naver.com/habit2good/221454959364")));
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        } else if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_4_NAME,""))){
-            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_4_LINK, "")));
+        } else if (slideName.equals(Applications.preference.getValue(Preference.NOTI_SLIDE_4_NAME,getResources().getString(R.string.notislide4_name)))){
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Applications.preference.getValue(Preference.NOTI_SLIDE_4_LINK, "https://blog.naver.com/habit2good/221458078758")));
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } else {
@@ -597,6 +596,8 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
                         Applications.preference.put(Preference.NOTI_SLIDE_4_IMAGE, slide4Image);
                         Applications.preference.put(Preference.NOTI_SLIDE_4_LINK, slide4Link);
 
+                        setHorizontalSlide();
+
                         Applications.preference.put(Preference.PLUS1_TIMER, plus1Timer);
                         break;
                     case CommonUtil.ACTION_GET_USER:
@@ -861,26 +862,18 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     private void setHorizontalSlide() {
         mNotificationSlider = (SliderLayout)findViewById(R.id.slider);
         LinkedHashMap<String,String> url_maps = new LinkedHashMap<String, String>();
-        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_1_NAME, "해빗투굿 생각"),
+        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_1_NAME, getResources().getString(R.string.notislide1_name)),
                 Applications.preference.getValue(Preference.NOTI_SLIDE_1_IMAGE, "http://a.habit2good.com/image/share/notislide_1.png"));
-        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_2_NAME, "친구 추천 이벤트"),
+        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_2_NAME, getResources().getString(R.string.notislide2_name)),
                 Applications.preference.getValue(Preference.NOTI_SLIDE_2_IMAGE, "http://a.habit2good.com/image/share/notislide_2.png"));
-        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_3_NAME, "공지 사항"),
+        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_3_NAME, getResources().getString(R.string.notislide3_name)),
                 Applications.preference.getValue(Preference.NOTI_SLIDE_3_IMAGE, "http://a.habit2good.com/image/share/notislide_3.png"));
-        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_4_NAME, "새소식"),
+        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_4_NAME, getResources().getString(R.string.notislide4_name)),
                 Applications.preference.getValue(Preference.NOTI_SLIDE_4_IMAGE, "http://a.habit2good.com/image/share/notislide_4.png"));
 
-        Log.i(getClass().getName(), "setHorizontalSLide slide 1 name="+Applications.preference.getValue(Preference.NOTI_SLIDE_1_NAME, ""));
-        Log.i(getClass().getName(), "setHorizontalSLide slide 1 image="+Applications.preference.getValue(Preference.NOTI_SLIDE_1_IMAGE, ""));
-        Log.i(getClass().getName(), "setHorizontalSLide slide 1 link="+Applications.preference.getValue(Preference.NOTI_SLIDE_1_LINK, ""));
+        /*LinkedHashMap<String,Integer> file_maps = new LinkedHashMap<String, Integer>();
 
-        /*url_maps.put("공지 사항", "http://a.habit2good.com/image/share/notislide_3.png");
-        url_maps.put("새소식", "http://a.habit2good.com/image/share/notislide_4.png");*/
-
-        //HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
-        LinkedHashMap<String,Integer> file_maps = new LinkedHashMap<String, Integer>();
-
-        /*file_maps.put("해빗투굿 생각",R.drawable.notislide_1);
+        file_maps.put("해빗투굿 생각",R.drawable.notislide_1);
         file_maps.put("알리타",R.drawable.alita);
         file_maps.put("데드풀2",R.drawable.deadpool2);
         file_maps.put("캡틴마블", R.drawable.mavel);*/
