@@ -169,7 +169,7 @@ public class PointmallActivity extends BaseActivity
             /*requestNotice();*/
             //AppGuidePopupShow();
 
-            return;
+            finish();
         } else {
             Log.i(TAG, "user_id"+Applications.preference.getValue(Preference.USER_ID, ""));
             //view = getLayoutInflater().inflate(R.layout.activity_pointmall, null);
