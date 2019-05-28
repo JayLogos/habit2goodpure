@@ -19,7 +19,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -94,14 +93,9 @@ public class HabitsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         if (Applications.preference.getValue(Preference.USER_ID, "").equals("")) {
-            Button joinButton = findViewById(R.id.btn_join);
-            joinButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), SignActivity.class);
-                    startActivity(intent);
-                }
-            });
+            Intent intent = new Intent(getApplicationContext(), SignActivity.class);
+            startActivity(intent);
+            finish();
         } else {
             Log.i(getClass().getName(), "user_id"+Applications.preference.getValue(Preference.USER_ID, ""));
         }
