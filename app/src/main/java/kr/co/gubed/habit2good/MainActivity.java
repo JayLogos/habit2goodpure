@@ -239,7 +239,7 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
             @Override
             public void onClick(View v) {
                 if (adSwitch.isChecked() && ((int)(remainTime/1000) != 0)) {
-                    iv_plus1.startAnimation(anim);
+                    //iv_plus1.startAnimation(anim);
                     Toast.makeText(getApplicationContext(), (int)(remainTime/1000)+" 초 후에 다시 시도하세요.", Toast.LENGTH_LONG).show();
                 } else {
                     setPlus1UIData();
@@ -451,7 +451,7 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
     }
 
     private void setPlus1UIData() {
-        iv_plus1.startAnimation(anim);
+        //iv_plus1.startAnimation(anim);
 
         int attempt = Integer.parseInt(tv_attempt.getText().toString());
         attempt++;
