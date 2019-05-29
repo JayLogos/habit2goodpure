@@ -7,13 +7,26 @@ android {
         applicationId "kr.co.gubed.habit2good"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 50
-        versionName "1.1.0"
+        versionCode 51
+        versionName "1.1.1"
     }
+    signingConfigs{
+        releaseWithSignedKey {
+            storeFile file("C:\\Users\\Administrator\\.android\\habit2good.jks")
+            storePassword "good!2018"
+            keyAlias "keyhabit2good"
+            keyPassword "good!2018"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseWithSignedKey
+        }
+        debug{
+            signingConfig signingConfigs.releaseWithSignedKey
         }
     }
     sourceSets { main { java.srcDirs = ['src/main/java', 'src/main/calendar'] } }
