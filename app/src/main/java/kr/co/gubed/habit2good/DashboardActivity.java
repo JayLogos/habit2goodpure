@@ -93,20 +93,14 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     private BannerAdView bannerAdView;
     private LinearLayout ll_demoDisplay;
     private LinearLayout ll_rating;
-    private PointmallActivity pointmallActivity = new PointmallActivity();
+    private TextView tv_demo;
 
     private LoadingDialog loadingDialog;
-    private MainActivity activity;
 
     private String TAG = this.getClass().toString();
     private CashPopDialog cashPopDialog;
     private Applications applications;
     private Tracker tracker;
-
-    private ArrayList<JSONObject> npMap;
-    private HashMap<String, NetworkErrorModel> networkErrorHash;
-
-    private HashMap<String, String> homeList;
 
     private String noticeContents;
 
@@ -431,6 +425,15 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
             }
         });
 
+        tv_demo = findViewById(R.id.tv_demo);
+        tv_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInputDialogForDemo();
+                return;
+            }
+        });
+
         getUserInfo();
         requestWalletInfo();
 
@@ -477,7 +480,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         }
 
         try {
-            //HideLoadingProgress();
+            HideLoadingProgress();
             //hideRefreshIconAnimation();
         } catch (Exception ignore) {
         }
@@ -632,7 +635,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     @Override
     public void onTaskError(String param, String action, String result) {
         try {
-            //HideLoadingProgress();
+            HideLoadingProgress();
             //hideRefreshIconAnimation();
         } catch (Exception ignore) {
         }
@@ -725,7 +728,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         long partner4Gpoint = partner4Count * (long)(averageIncome * 0.1);
         long partner5Gpoint = partner5Count * (long)(averageIncome * 0.1);
         long partner6Gpoint = partner6Count * (long)(averageIncome * 0.1);
-        totalGpoint = partner1Gpoint + partner2Gpoint + partner3Gpoint + partner4Gpoint + partner5Gpoint + partner6Gpoint;
+        totalGpoint = myGpoint + partner1Gpoint + partner2Gpoint + partner3Gpoint + partner4Gpoint + partner5Gpoint + partner6Gpoint;
 
         tv_gpoint.setText("월 예상 수익 "+String.format("%,d", totalGpoint));
         tv_gpoint.setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorPrimary, null));
@@ -831,7 +834,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
             if (loadingDialog == null) {
                 loadingDialog = new LoadingDialog(this);
             }
-            activity.runOnUiThread(new Runnable() {
+            runOnUiThread(new Runnable() {
                 public void run() {
                     try {
                         loadingDialog.show();
@@ -849,7 +852,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     public void HideLoadingProgress() throws Exception {
         //hide loading
         Log.i(getClass().getName(), "HideLoadingProgress start");
-        activity.runOnUiThread(new Runnable() {
+        runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 try {
