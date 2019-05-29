@@ -23,14 +23,6 @@
           }
         },
         {
-          "client_id": "1035578351758-u372betgej9qiektkeau1ektas8p0mn6.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "kr.co.gubed.habit2good",
-            "certificate_hash": "6edd0236b46b9d693a30a3bddf5048aa3f887126"
-          }
-        },
-        {
           "client_id": "1035578351758-tqdabihakactunf7efrnac5gjtofblh4.apps.googleusercontent.com",
           "client_type": 3
         }
