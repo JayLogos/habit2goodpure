@@ -418,6 +418,19 @@
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
+                        <TextView
+                            android:id="@+id/tv_demo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginEnd="@dimen/space_16dp"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="보상 체험"
+                            android:textColor="@color/colorAccent" />
+
                     </LinearLayout>
 
                     <TableLayout
