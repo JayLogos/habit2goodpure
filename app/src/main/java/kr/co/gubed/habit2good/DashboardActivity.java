@@ -712,19 +712,19 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     void setDemoDisplay(Integer member, Integer averageIncome, Integer tr) {
         long totalGpoint;
         long trophy = tr;
-        long myGpoint = (int)(averageIncome * 0.3);
+        long myGpoint = (int)(averageIncome * 1);
         long partner1Count = (long)Math.pow(member, 1);
         long partner2Count = (long)Math.pow(member, 2);
         long partner3Count = (long)Math.pow(member, 3);
         long partner4Count = (long)Math.pow(member, 4);
         long partner5Count = (long)Math.pow(member, 5);
         long partner6Count = (long)Math.pow(member, 6);
-        long partner1Gpoint = partner1Count * (long)(averageIncome * 0.05);
-        long partner2Gpoint = partner2Count * (long)(averageIncome * 0.05);
-        long partner3Gpoint = partner3Count * (long)(averageIncome * 0.05);
-        long partner4Gpoint = partner4Count * (long)(averageIncome * 0.05);
-        long partner5Gpoint = partner5Count * (long)(averageIncome * 0.05);
-        long partner6Gpoint = partner6Count * (long)(averageIncome * 0.05);
+        long partner1Gpoint = partner1Count * (long)(averageIncome * 0.1);
+        long partner2Gpoint = partner2Count * (long)(averageIncome * 0.1);
+        long partner3Gpoint = partner3Count * (long)(averageIncome * 0.1);
+        long partner4Gpoint = partner4Count * (long)(averageIncome * 0.1);
+        long partner5Gpoint = partner5Count * (long)(averageIncome * 0.1);
+        long partner6Gpoint = partner6Count * (long)(averageIncome * 0.1);
         totalGpoint = partner1Gpoint + partner2Gpoint + partner3Gpoint + partner4Gpoint + partner5Gpoint + partner6Gpoint;
 
         tv_gpoint.setText("월 예상 수익 "+String.format("%,d", totalGpoint));
