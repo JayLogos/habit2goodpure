@@ -1,4 +1,4 @@
-package kr.co.gubed.habit2good;
+package kr.co.gubed.habit2goodpure;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -23,15 +23,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
-import kr.co.gubed.habit2good.gpoint.database.dataDB;
-import kr.co.gubed.habit2good.gpoint.model.AlarmNoti;
-import kr.co.gubed.habit2good.gpoint.model.GiftBoxModel;
-import kr.co.gubed.habit2good.gpoint.model.NoticeModel;
-import kr.co.gubed.habit2good.gpoint.util.CommonUtil;
+import kr.co.gubed.habit2goodpure.gpoint.database.dataDB;
+import kr.co.gubed.habit2goodpure.gpoint.model.AlarmNoti;
+import kr.co.gubed.habit2goodpure.gpoint.model.GiftBoxModel;
+import kr.co.gubed.habit2goodpure.gpoint.model.NoticeModel;
+import kr.co.gubed.habit2goodpure.gpoint.util.CommonUtil;
 
 public class HabitDbAdapter {
-    public static final String DATABASE_NAME = "habit2good.db";
-    private static final int DATABASE_VERSION = 27;     // 2.0 이전에 23이었음
+    public static final String DATABASE_NAME = "habit2goodpure.db";
+    private static final int DATABASE_VERSION = 1;     //
     private final String tblHabitPreference = "tbl_habit_preference";
     private final String tblHabitExecResult = "tbl_habit_exec_result";
     private final String tblCategories = "tbl_categories";
