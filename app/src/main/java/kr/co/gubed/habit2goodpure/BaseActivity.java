@@ -1,4 +1,4 @@
-package kr.co.gubed.habit2good;
+package kr.co.gubed.habit2goodpure;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -52,8 +52,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
                 startActivity(new Intent(this, MainActivity.class));
             } else if (itemId == R.id.btn_nav_habits) {
                 startActivity(new Intent(this, HabitsActivity.class));
-            } else if (itemId == R.id.btn_nav_point) {
-                startActivity(new Intent(this, PointmallActivity.class));
             } else if (itemId == R.id.btn_nav_dashboard) {
                 startActivity(new Intent(this, DashboardActivity.class));
             }
