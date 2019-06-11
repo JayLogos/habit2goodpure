@@ -11,10 +11,10 @@
         android:icon="@drawable/baseline_all_inclusive_black_24dp"
         android:title="@string/btn_nav_habits" />
 
-    <item
+    <!--<item
         android:id="@+id/btn_nav_point"
         android:icon="@drawable/outline_store_mall_directory_black_24"
-        android:title="@string/btn_nav_point" />
+        android:title="@string/btn_nav_point" />-->
 
     <item
         android:id="@+id/btn_nav_dashboard"
