@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="kr.co.gubed.habit2good">
+    package="kr.co.gubed.habit2goodpure">
 
     <uses-sdk
         tools:overrideLibrary="com.mopub.mobileads.native_static,com.mopub.mobileads.base,com.mopub.mobileads.rewarded_video,com.mopub.mobileads.interstitial,com.ironsource.mopubadapters"
@@ -21,7 +21,7 @@
     <uses-feature android:name="android.hardware.camera2" android:required="false" />
 
     <application
-        android:name=".gpoint.util.Applications"
+        android:name="kr.co.gubed.habit2goodpure.gpoint.util.Applications"
         android:allowBackup="false"
         tools:replace="android:allowBackup"
         android:icon="@drawable/ic_habit2good_512"
@@ -37,7 +37,7 @@
             android:value="ca-app-pub-7935254117249497~3267261242"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name="kr.co.gubed.habit2goodpure.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/app_name"
             >
@@ -56,14 +56,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".HabitsActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.HabitsActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="H2G_HABIT"/>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".PointmallActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.PointmallActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="H2G_REWARD"/>
@@ -72,7 +72,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".DashboardActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="H2G_TROPHY"/>
@@ -82,49 +82,49 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddHabit"
-            android:parentActivityName=".HabitsActivity">
+        <activity android:name="kr.co.gubed.habit2goodpure.AddHabit"
+            android:parentActivityName="kr.co.gubed.habit2goodpure.HabitsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HabitsActivity" />
+                android:value="kr.co.gubed.habit2goodpure.HabitsActivity" />
         </activity>
 
-        <activity android:name=".UpdateHabitItem"
+        <activity android:name="kr.co.gubed.habit2goodpure.UpdateHabitItem"
             android:label="좋은 습관 수정하기"
-            android:parentActivityName=".HabitsActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.HabitsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HabitsActivity" />
+                android:value="kr.co.gubed.habit2goodpure.HabitsActivity" />
         </activity>
 
-        <activity android:name=".HabitReminderActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.HabitReminderActivity"
             android:label="알람"
-            android:parentActivityName=".HabitsActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.HabitsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HabitsActivity" />
+                android:value="kr.co.gubed.habit2goodpure.HabitsActivity" />
         </activity>
 
-        <activity android:name=".AddHabitReminder"
+        <activity android:name="kr.co.gubed.habit2goodpure.AddHabitReminder"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".HabitReminderActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.HabitReminderActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HabitReminderActivity" />
+                android:value="kr.co.gubed.habit2goodpure.HabitReminderActivity" />
         </activity>
 
-        <activity android:name=".UpdateHabitReminder"
+        <activity android:name="kr.co.gubed.habit2goodpure.UpdateHabitReminder"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".HabitReminderActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.HabitReminderActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HabitReminderActivity" />
+                android:value="kr.co.gubed.habit2goodpure.HabitReminderActivity" />
         </activity>
 
-        <receiver android:name=".AlarmReceiver" />
+        <receiver android:name="kr.co.gubed.habit2goodpure.AlarmReceiver" />
 
         <receiver
-            android:name=".BootReceiver"
+            android:name="kr.co.gubed.habit2goodpure.BootReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -133,7 +133,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="kr.co.gubed.habit2good"
+            android:authorities="kr.co.gubed.habit2goodpure"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -141,37 +141,37 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".HabitMemoActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.HabitMemoActivity"
             android:label="메모"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="kr.co.gubed.habit2goodpure.MainActivity" />
         </activity>
 
-        <activity android:name=".EditMemoActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.EditMemoActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".preference.SettingsActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.preference.SettingsActivity"
             android:label="설정"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="kr.co.gubed.habit2goodpure.MainActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
                 <action android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <service android:name=".AutoDbBackupJobService"
+        <service android:name="kr.co.gubed.habit2goodpure.AutoDbBackupJobService"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
 
-        <activity android:name=".GpointRankingBoardActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.GpointRankingBoardActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="지포인트 순위"
-            android:parentActivityName=".DashboardActivity">
+            android:parentActivityName="kr.co.gubed.habit2goodpure.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
@@ -180,24 +180,24 @@
                 android:resource="@xml/searchable"/>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".DashboardActivity" />
+                android:value="kr.co.gubed.habit2goodpure.DashboardActivity" />
         </activity>
 
         <!-- timecash -->
-        <activity android:name=".gpoint.activity.SignActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             >
         </activity>
-        <activity android:name=".gpoint.activity.SignJoinActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.gpoint.activity.SignJoinActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             >
         </activity>
-        <activity android:name=".gpoint.activity.SignLoginActivity"
+        <activity android:name="kr.co.gubed.habit2goodpure.gpoint.activity.SignLoginActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
@@ -231,7 +231,7 @@
         </activity>
         -->
         <activity
-            android:name=".gpoint.activity.MissionActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.MissionActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
@@ -239,59 +239,59 @@
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.StoreActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.StoreActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.SettingActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.SettingActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.TermsActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.TermsActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.PrivateActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.PrivateActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.HistoryActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.HistoryActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.InviteActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.InviteActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.ProfileActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.ProfileActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.NoticeActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.NoticeActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".gpoint.activity.GiftBoxActivity"
+            android:name="kr.co.gubed.habit2goodpure.gpoint.activity.GiftBoxActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             >
@@ -301,18 +301,18 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <service android:name=".gpoint.service.MyFirebaseMessagingService" >
+        <service android:name="kr.co.gubed.habit2goodpure.gpoint.service.MyFirebaseMessagingService" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".gpoint.service.MyFirebaseInstanceIDService" >
+        <service android:name="kr.co.gubed.habit2goodpure.gpoint.service.MyFirebaseInstanceIDService" >
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <receiver android:name=".gpoint.service.EventNotiReceiver">
+        <receiver android:name="kr.co.gubed.habit2goodpure.gpoint.service.EventNotiReceiver">
             <intent-filter>
                 <action android:name="EVENTNOTI"/>
             </intent-filter>
