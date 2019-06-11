@@ -1,4 +1,4 @@
-package kr.co.gubed.habit2good;
+package kr.co.gubed.habit2goodpure;
 
 import android.app.Dialog;
 import android.app.NotificationChannel;
@@ -64,20 +64,20 @@ import java.util.TimerTask;
 import java.util.regex.Pattern;
 
 import io.fabric.sdk.android.Fabric;
-import kr.co.gubed.habit2good.gpoint.activity.SignActivity;
-import kr.co.gubed.habit2good.gpoint.filecache.FileCache;
-import kr.co.gubed.habit2good.gpoint.filecache.FileCacheFactory;
-import kr.co.gubed.habit2good.gpoint.listener.AsyncTaskCompleteListener;
-import kr.co.gubed.habit2good.gpoint.service.MyFirebaseInstanceIDService;
-import kr.co.gubed.habit2good.gpoint.util.APICrypto;
-import kr.co.gubed.habit2good.gpoint.util.Applications;
-import kr.co.gubed.habit2good.gpoint.util.AsyncHTTPPost;
-import kr.co.gubed.habit2good.gpoint.util.CommonUtil;
-import kr.co.gubed.habit2good.gpoint.util.Preference;
-import kr.co.gubed.habit2good.gpoint.view.AppGuideDialog;
-import kr.co.gubed.habit2good.gpoint.view.CashPopDialog;
-import kr.co.gubed.habit2good.gpoint.view.NetworkDialog;
-import kr.co.gubed.habit2good.gpoint.view.NoticeDialog;
+import kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity;
+import kr.co.gubed.habit2goodpure.gpoint.filecache.FileCache;
+import kr.co.gubed.habit2goodpure.gpoint.filecache.FileCacheFactory;
+import kr.co.gubed.habit2goodpure.gpoint.listener.AsyncTaskCompleteListener;
+import kr.co.gubed.habit2goodpure.gpoint.service.MyFirebaseInstanceIDService;
+import kr.co.gubed.habit2goodpure.gpoint.util.APICrypto;
+import kr.co.gubed.habit2goodpure.gpoint.util.Applications;
+import kr.co.gubed.habit2goodpure.gpoint.util.AsyncHTTPPost;
+import kr.co.gubed.habit2goodpure.gpoint.util.CommonUtil;
+import kr.co.gubed.habit2goodpure.gpoint.util.Preference;
+import kr.co.gubed.habit2goodpure.gpoint.view.AppGuideDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.CashPopDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.NetworkDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.NoticeDialog;
 import lecho.lib.hellocharts.listener.LineChartOnValueSelectListener;
 import lecho.lib.hellocharts.model.Axis;
 import lecho.lib.hellocharts.model.Line;
@@ -122,8 +122,9 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
     private boolean pointsHaveDifferentColor = true;
     private boolean hasGradientToTransparent = false;
 
-    private long plus1Timer = Integer.parseInt(Applications.preference.getValue(Preference.PLUS1_TIMER, "60"));
-    private long TIMER =  (plus1Timer < 60)? (60 * 1000) : (plus1Timer * 1000);  // default 1분
+    private long plus1Timer = Integer.parseInt(Applications.preference.getValue(Preference.PLUS1_TIMER, "0"));
+    //private long TIMER =  (plus1Timer < 60)? (60 * 1000) : (plus1Timer * 1000);  // default 1분
+    private long TIMER =  0;
     private long lastTime;
     private long remainTime;
     private Timer timer;
@@ -479,7 +480,11 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
 
             @Override
             public void onShow() {
-                requestPutPlus1GP();
+                /*
+                 * Pure 버전에서는 GP 지급 기능 없음
+                 * 향후 어떤 형태의 포인트 지급이 필요할 경우 아래 function을 사용할 수 있음
+                 *
+                  requestPutPlus1GP();*/
             }
 
             @Override
@@ -823,9 +828,11 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
                         Applications.ePreference.putBalanceGpoint(balanceGpoint);
                         Applications.ePreference.put(EPreference.N_MY_GPOINT, myGpoint);*/
                         String plus1Timer = jo.getString((CommonUtil.RESULT_PLUS1_TIMER));
-                        Applications.preference.put(Preference.PLUS1_TIMER, plus1Timer);
+                        //Applications.preference.put(Preference.PLUS1_TIMER, plus1Timer);
+                        Applications.preference.put(Preference.PLUS1_TIMER, 0);
 
-                        TIMER =  (Integer.parseInt(plus1Timer) < 60)? (60 * 1000) : (Integer.parseInt(plus1Timer) * 1000);
+                        //TIMER =  (Integer.parseInt(plus1Timer) < 60)? (60 * 1000) : (Integer.parseInt(plus1Timer) * 1000);
+                        TIMER =  0;
 
                         Toast.makeText(getApplicationContext(), R.string.gp_1plus_toast_msg, Toast.LENGTH_LONG).show();
                         break;
