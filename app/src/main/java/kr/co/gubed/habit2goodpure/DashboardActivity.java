@@ -1,4 +1,4 @@
-package kr.co.gubed.habit2good;
+package kr.co.gubed.habit2goodpure;
 
 import android.animation.ValueAnimator;
 import android.app.Dialog;
@@ -51,25 +51,23 @@ import com.tnkfactory.ad.TnkSession;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-import kr.co.gubed.habit2good.gpoint.activity.ProfileActivity;
-import kr.co.gubed.habit2good.gpoint.activity.SettingActivity;
-import kr.co.gubed.habit2good.gpoint.activity.SignActivity;
-import kr.co.gubed.habit2good.gpoint.listener.AsyncTaskCompleteListener;
-import kr.co.gubed.habit2good.gpoint.model.NetworkErrorModel;
-import kr.co.gubed.habit2good.gpoint.util.APICrypto;
-import kr.co.gubed.habit2good.gpoint.util.Applications;
-import kr.co.gubed.habit2good.gpoint.util.AsyncHTTPPost;
-import kr.co.gubed.habit2good.gpoint.util.CommonUtil;
-import kr.co.gubed.habit2good.gpoint.util.EPreference;
-import kr.co.gubed.habit2good.gpoint.util.Preference;
-import kr.co.gubed.habit2good.gpoint.view.CashPopDialog;
-import kr.co.gubed.habit2good.gpoint.view.LoadingDialog;
+import kr.co.gubed.habit2goodpure.gpoint.activity.ProfileActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.SettingActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity;
+import kr.co.gubed.habit2goodpure.gpoint.listener.AsyncTaskCompleteListener;
+import kr.co.gubed.habit2goodpure.gpoint.util.APICrypto;
+import kr.co.gubed.habit2goodpure.gpoint.util.Applications;
+import kr.co.gubed.habit2goodpure.gpoint.util.AsyncHTTPPost;
+import kr.co.gubed.habit2goodpure.gpoint.util.CommonUtil;
+import kr.co.gubed.habit2goodpure.gpoint.util.EPreference;
+import kr.co.gubed.habit2goodpure.gpoint.util.Preference;
+import kr.co.gubed.habit2goodpure.gpoint.view.CashPopDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.LoadingDialog;
 
 
 public class DashboardActivity extends BaseActivity implements AsyncTaskCompleteListener<String>,
