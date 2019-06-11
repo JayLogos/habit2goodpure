@@ -1,4 +1,4 @@
-package kr.co.gubed.habit2good;
+package kr.co.gubed.habit2goodpure;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -26,7 +26,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -50,32 +49,32 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import kr.co.gubed.habit2good.gpoint.activity.GiftBoxActivity;
-import kr.co.gubed.habit2good.gpoint.activity.HistoryActivity;
-import kr.co.gubed.habit2good.gpoint.activity.InviteActivity;
-import kr.co.gubed.habit2good.gpoint.activity.MissionActivity;
-import kr.co.gubed.habit2good.gpoint.activity.SettingActivity;
-import kr.co.gubed.habit2good.gpoint.activity.SignActivity;
-import kr.co.gubed.habit2good.gpoint.activity.StoreActivity;
-import kr.co.gubed.habit2good.gpoint.filecache.ByteProviderUtil;
-import kr.co.gubed.habit2good.gpoint.filecache.FileCache;
-import kr.co.gubed.habit2good.gpoint.filecache.FileCacheFactory;
-import kr.co.gubed.habit2good.gpoint.listener.AsyncTaskCompleteListener;
-import kr.co.gubed.habit2good.gpoint.listener.GuideListener;
-import kr.co.gubed.habit2good.gpoint.model.AlarmNoti;
-import kr.co.gubed.habit2good.gpoint.model.NetworkErrorModel;
-import kr.co.gubed.habit2good.gpoint.util.APICrypto;
-import kr.co.gubed.habit2good.gpoint.util.Applications;
-import kr.co.gubed.habit2good.gpoint.util.AsyncHTTPPost;
-import kr.co.gubed.habit2good.gpoint.util.CommonUtil;
-import kr.co.gubed.habit2good.gpoint.util.EPreference;
-import kr.co.gubed.habit2good.gpoint.util.Preference;
-import kr.co.gubed.habit2good.gpoint.view.AppGuideDialog;
-import kr.co.gubed.habit2good.gpoint.view.CashPopDialog;
-import kr.co.gubed.habit2good.gpoint.view.LoadingDialog;
-import kr.co.gubed.habit2good.gpoint.view.NetworkDialog;
-import kr.co.gubed.habit2good.gpoint.view.NoticeDialog;
-import kr.co.gubed.habit2good.gpoint.view.ReviewDialog;
+import kr.co.gubed.habit2goodpure.gpoint.activity.GiftBoxActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.HistoryActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.InviteActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.MissionActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.SettingActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity;
+import kr.co.gubed.habit2goodpure.gpoint.activity.StoreActivity;
+import kr.co.gubed.habit2goodpure.gpoint.filecache.ByteProviderUtil;
+import kr.co.gubed.habit2goodpure.gpoint.filecache.FileCache;
+import kr.co.gubed.habit2goodpure.gpoint.filecache.FileCacheFactory;
+import kr.co.gubed.habit2goodpure.gpoint.listener.AsyncTaskCompleteListener;
+import kr.co.gubed.habit2goodpure.gpoint.listener.GuideListener;
+import kr.co.gubed.habit2goodpure.gpoint.model.AlarmNoti;
+import kr.co.gubed.habit2goodpure.gpoint.model.NetworkErrorModel;
+import kr.co.gubed.habit2goodpure.gpoint.util.APICrypto;
+import kr.co.gubed.habit2goodpure.gpoint.util.Applications;
+import kr.co.gubed.habit2goodpure.gpoint.util.AsyncHTTPPost;
+import kr.co.gubed.habit2goodpure.gpoint.util.CommonUtil;
+import kr.co.gubed.habit2goodpure.gpoint.util.EPreference;
+import kr.co.gubed.habit2goodpure.gpoint.util.Preference;
+import kr.co.gubed.habit2goodpure.gpoint.view.AppGuideDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.CashPopDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.LoadingDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.NetworkDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.NoticeDialog;
+import kr.co.gubed.habit2goodpure.gpoint.view.ReviewDialog;
 
 
 public class PointmallActivity extends BaseActivity
@@ -150,7 +149,8 @@ public class PointmallActivity extends BaseActivity
 
     @Override
     int getNavigationMenuItemId() {
-        return R.id.btn_nav_point;
+        //return R.id.btn_nav_point;
+        return R.id.btn_nav_dashboard;
     }
 
     @Override
