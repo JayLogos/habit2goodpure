@@ -180,7 +180,7 @@
                     android:background="@color/md_white_1000"
                     android:elevation="@dimen/elevation_1dp"
                     android:orientation="vertical"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/textView4"
