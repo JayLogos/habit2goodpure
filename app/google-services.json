@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1035578351758:android:78b4b430246887c1",
         "android_client_info": {
-          "package_name": "kr.co.gubed.habit2good"
+          "package_name": "kr.co.gubed.habit2goodpure"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "1035578351758-bhurn8ibmscr800imdkkosef2vlp2gbh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "kr.co.gubed.habit2good",
+            "package_name": "kr.co.gubed.habit2goodpure",
             "certificate_hash": "c81c58d398dda65c2a83cd48738da68973dc8bb9"
           }
         },
@@ -26,7 +26,7 @@
           "client_id": "1035578351758-bv3o0jklrabe722r8rs76q2v1ugn118l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "kr.co.gubed.habit2good",
+            "package_name": "kr.co.gubed.habit2goodpure",
             "certificate_hash": "6feb45eeae9af7f51e42fce275296bc474dbd9d4"
           }
         },

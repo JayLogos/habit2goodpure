@@ -26,7 +26,7 @@
             android:key="pref_autobackup"
             android:title="자동 백업" />
 
-        <kr.co.gubed.habit2good.preference.TimePickerPreference
+        <kr.co.gubed.habit2goodpure.preference.TimePickerPreference
             android:key="timepicker_preference"
             android:title="@string/backup_title"/>
     </PreferenceScreen>

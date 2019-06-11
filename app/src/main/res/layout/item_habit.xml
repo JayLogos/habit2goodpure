@@ -137,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <kr.co.gubed.habit2good.HfCollapsibleCalendar
+                <kr.co.gubed.habit2goodpure.HfCollapsibleCalendar
                     android:id="@+id/calendarView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -358,7 +358,7 @@
 
         </LinearLayout>
 
-        <kr.co.gubed.habit2good.MyCircleMenuView
+        <kr.co.gubed.habit2goodpure.MyCircleMenuView
             android:id="@+id/circle_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
