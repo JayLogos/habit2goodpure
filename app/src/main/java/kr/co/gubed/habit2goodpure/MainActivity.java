@@ -343,9 +343,9 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
          * good_saying: 오늘의 명언(해빗투굿 생각)
          * reward: 현재 특별히 사용하지 않음.
          */
-        FirebaseMessaging.getInstance().subscribeToTopic("good_saying");
-        FirebaseMessaging.getInstance().subscribeToTopic("reward");
-        FirebaseMessaging.getInstance().subscribeToTopic("notice");
+        FirebaseMessaging.getInstance().subscribeToTopic("h2gpure_good_saying");
+        //FirebaseMessaging.getInstance().subscribeToTopic("reward");
+        FirebaseMessaging.getInstance().subscribeToTopic("h2gpure_notice");
         initAlarmChannel();
 
         dbAdapter = new HabitDbAdapter(this);
