@@ -37,7 +37,7 @@ public class CommonUtil {
     public static final String PROFILE_SERVER_URL = "http://a.habit2good.com/p.php";
     public static final String PROFILE_SERVER_IMAGE_URL = "http://a.habit2good.com/image/profile/";
 
-    public static final String ACTION_LOGIN = "s";
+    public static final String ACTION_LOGIN = "s-pure";
     public static final String ACTION_JOIN = "j";
     public static final String ACTION_ACCOUNT_TRANSFER = "c";
     public static final String ACTION_SIGN_OUT = "out";
