@@ -869,8 +869,8 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         LinkedHashMap<String,String> url_maps = new LinkedHashMap<String, String>();
         url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_1_NAME, getResources().getString(R.string.notislide1_name)),
                 Applications.preference.getValue(Preference.NOTI_SLIDE_1_IMAGE, "http://a.habit2good.com/image/share/notislide_1.png"));
-        url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_2_NAME, getResources().getString(R.string.notislide2_name)),
-                Applications.preference.getValue(Preference.NOTI_SLIDE_2_IMAGE, "http://a.habit2good.com/image/share/notislide_2.png"));
+        /*url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_2_NAME, getResources().getString(R.string.notislide2_name)),
+                Applications.preference.getValue(Preference.NOTI_SLIDE_2_IMAGE, "http://a.habit2good.com/image/share/notislide_2.png"));*/
         url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_3_NAME, getResources().getString(R.string.notislide3_name)),
                 Applications.preference.getValue(Preference.NOTI_SLIDE_3_IMAGE, "http://a.habit2good.com/image/share/notislide_3.png"));
         url_maps.put(Applications.preference.getValue(Preference.NOTI_SLIDE_4_NAME, getResources().getString(R.string.notislide4_name)),
