@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "787669388902-9lno6gvqjdv3hg517haqnhf1ks3ta129.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.gubed.habit2goodpure",
+            "certificate_hash": "91ab4d4ab7a02ce00611f62c2645c91f3f4d5664"
+          }
+        },
+        {
           "client_id": "787669388902-jgto3236o980j1b7d68p9fn95r4flgb5.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -33,7 +41,8 @@
             }
           ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-6364994088323407~6321974078"
     }
   ],
   "configuration_version": "1"
