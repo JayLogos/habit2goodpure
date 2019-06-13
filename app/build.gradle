@@ -12,10 +12,10 @@ android {
     }
     signingConfigs{
         releaseWithSignedKey {
-            storeFile file("C:\\Users\\Administrator\\.android\\habit2good.jks")
-            storePassword "good!2018"
-            keyAlias "keyhabit2good"
-            keyPassword "good!2018"
+            storeFile file("C:\\Users\\Administrator\\.android\\habit2goodpure.jks")
+            storePassword "pure!2019"
+            keyAlias "keyhabit2goodpure"
+            keyPassword "pure!2019"
         }
     }
 
