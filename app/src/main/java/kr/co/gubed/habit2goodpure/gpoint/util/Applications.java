@@ -11,6 +11,11 @@ import android.support.multidex.MultiDexApplication;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
@@ -19,13 +24,13 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import java.util.HashMap;
 import java.util.Locale;
 
+import kr.co.gubed.habit2goodpure.HabitDbAdapter;
 import kr.co.gubed.habit2goodpure.MainActivity;
 import kr.co.gubed.habit2goodpure.PointmallActivity;
+import kr.co.gubed.habit2goodpure.R;
 import kr.co.gubed.habit2goodpure.gpoint.activity.MissionActivity;
 import kr.co.gubed.habit2goodpure.gpoint.activity.StoreActivity;
-import kr.co.gubed.habit2goodpure.HabitDbAdapter;
 import kr.co.gubed.habit2goodpure.gpoint.listener.AdidListener;
-import kr.co.gubed.habit2goodpure.R;
 
 public class Applications extends MultiDexApplication {
 
@@ -60,7 +65,8 @@ public class Applications extends MultiDexApplication {
 
     private Tracker mTracker;
 
-    /*ADMOB public static AdView adView;*/
+    /*ADMOB */
+    public static AdView adView;
     //public static NativeExpressAdView nativeExpressAdView;
     public static boolean isAdmob = true;
 
@@ -71,8 +77,8 @@ public class Applications extends MultiDexApplication {
 
     public static int mobAdCnt = 0;
 
-    //admob
-    /*ADMOB public static InterstitialAd mInterstitialAd;*/
+    //ADMOB
+     public static InterstitialAd mInterstitialAd;
 
     private static String TAG;
 
@@ -140,9 +146,10 @@ public class Applications extends MultiDexApplication {
         isStart = false;
         isPopup = false;
         isAnim = false;
-        /*ADMOB if( Applications.isAdmob && Applications.adView != null){
+        /*ADMOB*/
+        if( Applications.isAdmob && Applications.adView != null){
             Applications.adView.destroy();
-        }*/
+        }
     }
 
     @TargetApi(Build.VERSION_CODES.M)
@@ -250,7 +257,7 @@ public class Applications extends MultiDexApplication {
         }
     }
 
-/* ADMOB
+ /*ADMOB*/
     public static void admobRequest(){
         Log.i(TAG, "admobRequest");
 
@@ -289,6 +296,5 @@ public class Applications extends MultiDexApplication {
             }
         });
     }
-*/
 
 }
