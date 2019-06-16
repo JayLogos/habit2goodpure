@@ -2,7 +2,6 @@ package kr.co.gubed.habit2goodpure;
 
 import android.animation.ValueAnimator;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,7 +13,6 @@ import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
-import android.telephony.TelephonyManager;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.util.Log;
@@ -41,12 +39,10 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.Tracker;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.tnkfactory.ad.BannerAdListener;
-import com.tnkfactory.ad.BannerAdType;
-import com.tnkfactory.ad.BannerAdView;
-import com.tnkfactory.ad.TnkSession;
 
 import org.json.JSONObject;
 
@@ -54,11 +50,9 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 import kr.co.gubed.habit2goodpure.gpoint.activity.ProfileActivity;
 import kr.co.gubed.habit2goodpure.gpoint.activity.SettingActivity;
-import kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity;
 import kr.co.gubed.habit2goodpure.gpoint.listener.AsyncTaskCompleteListener;
 import kr.co.gubed.habit2goodpure.gpoint.util.APICrypto;
 import kr.co.gubed.habit2goodpure.gpoint.util.Applications;
@@ -87,8 +81,8 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     private TextView tv_level4count, tv_level4point;
     private TextView tv_level5count, tv_level5point;
     private TextView tv_level6count, tv_level6point;
-    /*ADMOB private AdView adViewWallet;*/
-    private BannerAdView bannerAdView;
+    private AdView adView;
+    //TNK private BannerAdView bannerAdView;
     private LinearLayout ll_demoDisplay;
     private LinearLayout ll_rating;
     private TextView tv_demo;
@@ -168,6 +162,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
         View view;
 
+        /*JHLEE
         if (Applications.preference.getValue(Preference.USER_ID, "").equals("")) {
             Intent intent = new Intent(getApplicationContext(), SignActivity.class);
             startActivity(intent);
@@ -203,6 +198,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         } else {
             Applications.preference.put(Preference.AD_ID, Long.toString(subscriberId));
         }
+        JHLEE*/
 
 //        pointTabfragment.getNoticePopFileCache();
 //        pointTabfragment.getGiftBoxFileCache();
@@ -216,6 +212,11 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
         //activity = (MainActivity)getActivity();
 
+       /* toolbar = findViewById(R.id.habits_toolbar);
+        setSupportActionBar(toolbar);
+        actionbar = getSupportActionBar();
+        actionbar.setTitle(R.string.btn_nav_dashboard);
+*/
         toolbar = findViewById(R.id.habits_toolbar);
         setSupportActionBar(toolbar);
         actionbar = getSupportActionBar();
@@ -248,9 +249,9 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
             return;
         }
 
-        if (bannerAdView != null) {
+        /*TNK if (bannerAdView != null) {
             bannerAdView.onResume();
-        }
+        }*/
 
         String profileImage = Applications.preference.getValue(Preference.PROFILE_IMAGE, "");
         String profileImageUrl = CommonUtil.PROFILE_SERVER_IMAGE_URL + Applications.preference.getValue(Preference.USER_ID, "") + "/my_profile.jpg";
@@ -355,9 +356,10 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     @Override
     public void onPause() {
         super.onPause();
+        /*TNK
         if (bannerAdView != null) {
             bannerAdView.onPause();
-        }
+        }*/
     }
 
     @Override
@@ -371,9 +373,10 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        /*TNK
         if (bannerAdView != null) {
             bannerAdView.onDestroy();
-        }
+        }*/
     }
 
     private void init() {
@@ -435,6 +438,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
         getUserInfo();
         requestWalletInfo();
 
+        /*TNK
         bannerAdView = (BannerAdView) findViewById(R.id.banner_ad);
         bannerAdView.setBannerAdListener(new BannerAdListener() {
             @Override
@@ -451,11 +455,11 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
             public void onClick() {
 
             }
-        });
-        bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE); // or bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE)
-        /*adViewWallet = (AdView) findViewById(R.id.adViewWallet);
+        });*/
+        // TNK bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE); // or bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE)
+        adView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adViewWallet.loadAd(adRequest);*/
+        adView.loadAd(adRequest);
 
         ll_rating = findViewById(R.id.rating);
         ll_rating.setOnClickListener(new View.OnClickListener() {
