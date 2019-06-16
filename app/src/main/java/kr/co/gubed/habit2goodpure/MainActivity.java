@@ -17,7 +17,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -40,12 +39,13 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.answers.Answers;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.analytics.Tracker;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.tnkfactory.ad.BannerAdListener;
-import com.tnkfactory.ad.BannerAdType;
 import com.tnkfactory.ad.BannerAdView;
 import com.tnkfactory.ad.TnkAdListener;
 import com.tnkfactory.ad.TnkSession;
@@ -61,7 +61,6 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.regex.Pattern;
 
 import io.fabric.sdk.android.Fabric;
 import kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity;
@@ -98,7 +97,8 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
     private ScaleAnimation scaleAnimationanim;
     private TextView tv_selected_day, tv_count;
     private Switch adSwitch;
-    /* ADMOB private AdView adView;*/
+     /*ADMOB*/
+    private AdView adView;
     private BannerAdView bannerAdView;
     private RadioGroup radioGroup;
 
@@ -168,19 +168,20 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+ /* JHLEE
         if (Applications.preference.getValue(Preference.USER_ID, "").equals("")) {
             Intent intent = new Intent(getApplicationContext(), SignActivity.class);
             startActivity(intent);
 
-            /*getNoticePopFileCache();
+            *//*getNoticePopFileCache();
             getGiftBoxFileCache();
             getNoticeFileCache();
-*/
+*//*
             npMap = new ArrayList<>();
-/*
+*//*
             requestNotice();
             AppGuidePopupShow();
-*/
+*//*
 
             finish();
         } else {
@@ -216,12 +217,12 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
             Applications.preference.put(Preference.AD_ID, Long.toString(subscriberId));
         }
 
-/*
+*//*
         getNoticePopFileCache();
         getGiftBoxFileCache();
         getNoticeFileCache();
-*/
-
+*//*
+JHLEE*/
         int version = CommonUtil.getVersionCode(this);
         applications = (Applications) getApplication();
         tracker = applications.getDefaultTracker();
@@ -248,7 +249,7 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
             }
         });
 
-        //admobInterstitialReqeust();
+        admobInterstitialReqeust();
     }
 
     @Override
@@ -384,6 +385,11 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
             }
         });
 
+        adView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
+       /* TNK
         bannerAdView = (BannerAdView) findViewById(R.id.banner_ad);
         bannerAdView.setBannerAdListener(new BannerAdListener() {
             @Override
@@ -401,7 +407,7 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
 
             }
         });
-        bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE); // or bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE)
+        bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE); // or bannerAdView.loadAd(TnkSession.CPC, BannerAdType.LANDSCAPE)*/
 
         radioGroup = findViewById(R.id.graph_period);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -471,7 +477,7 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
 
         chart.startDataAnimation();
 
-        //requestNewInterstitial();
+        requestNewInterstitial();
         TnkSession.prepareInterstitialAd(this, TnkSession.CPC, new TnkAdListener() {
             @Override
             public void onClose(int i) {
@@ -716,13 +722,14 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
                     if( Applications.mobAdCnt > 10){
                         Applications.mobAdCnt = 0;
                     }
-                    /*if (Applications.mInterstitialAd.isLoaded() *//*&& Applications.mobAdCnt%2==1*//*) {
+                    /*ADMOB*/
+                    if (Applications.mInterstitialAd.isLoaded() && Applications.mobAdCnt%2==1) {
                         Applications.mInterstitialAd.show();
                         aBack();
                     } else {
                         aBack();
-                    }*/
-                    TnkSession.showInterstitialAd(MainActivity.this);
+                    }
+                    /*TNK TnkSession.showInterstitialAd(MainActivity.this);*/
 
                     //requestPutPlus1GP();      // 전면 광고가 정상적으로 출력되었을 루틴에서 처리했으나 여러번 호출됨.
 
@@ -770,13 +777,23 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);*/
     }
 
-/* ADMOB
+// ADMOB
     public void admobInterstitialReqeust() {
         if( Applications.mInterstitialAd == null) {
             Applications.mInterstitialAd = new InterstitialAd(getApplicationContext());
             Applications.mInterstitialAd.setAdUnitId(getApplicationContext().getResources().getString(R.string.interstitial_ad_unit_id_test));
         }
-        Applications.mInterstitialAd.setAdListener(new AdListener() {
+        /*Applications.mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                try {
+                    aBack();
+                }catch (Exception ignore){
+
+                }
+            }
+        });*/
+        Applications.mInterstitialAd.setAdListener(new com.google.android.gms.ads.AdListener(){
             @Override
             public void onAdClosed() {
                 try {
@@ -797,7 +814,6 @@ public class MainActivity extends BaseActivity implements AsyncTaskCompleteListe
             Log.e(getClass().getName(), "admob intersitial ad wasn't loaded yet");
         }
     }
-*/
 
     @Override
     public void onTaskComplete(String result) {
