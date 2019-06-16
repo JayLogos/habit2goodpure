@@ -44,10 +44,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 import kr.co.gubed.habit2goodpure.gpoint.activity.SettingActivity;
-import kr.co.gubed.habit2goodpure.gpoint.activity.SignActivity;
-import kr.co.gubed.habit2goodpure.gpoint.util.Applications;
 import kr.co.gubed.habit2goodpure.gpoint.util.CommonUtil;
-import kr.co.gubed.habit2goodpure.gpoint.util.Preference;
 import kr.co.gubed.habit2goodpure.gpoint.view.LoadingDialog;
 
 
@@ -92,6 +89,7 @@ public class HabitsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /*JHLEE
         if (Applications.preference.getValue(Preference.USER_ID, "").equals("")) {
             Intent intent = new Intent(getApplicationContext(), SignActivity.class);
             startActivity(intent);
@@ -99,6 +97,7 @@ public class HabitsActivity extends BaseActivity {
         } else {
             Log.i(getClass().getName(), "user_id"+Applications.preference.getValue(Preference.USER_ID, ""));
         }
+        JHLEE*/
 
         init();
     }
