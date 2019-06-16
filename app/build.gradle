@@ -87,7 +87,7 @@ dependencies {
     }
     implementation 'com.google.firebase:firebase-core:16.0.5'
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
-    /*implementation 'com.google.firebase:firebase-ads:17.1.1' */   // 2019.04.16 adsense 계정 정지로 TNK로 대체
+    implementation 'com.google.firebase:firebase-ads:17.1.1'    // 2019.04.16 adsense 계정 정지로 TNK로 대체
     implementation 'com.google.android.gms:play-services-analytics:16.0.5'
     implementation files('libs/IgawCommon_v4.5.5a.jar')
     implementation files('libs/IgawAdpopcorn_v5.1.7a.jar')
