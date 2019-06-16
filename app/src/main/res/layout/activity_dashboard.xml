@@ -303,7 +303,7 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <RelativeLayout
+                    <!--<RelativeLayout
                         android:id="@+id/rl_adviewwallet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -315,25 +315,25 @@
                             android:layout_height="@dimen/height_50dp"
                             android:layout_alignParentBottom="false"
                             android:minHeight="@dimen/height_50dp" />
-                    </RelativeLayout>
+                    </RelativeLayout>-->
 
-                    <!--<RelativeLayout
-                        android:id="@+id/rl_adviewwallet"
+                    <RelativeLayout
+                        android:id="@+id/rl_adview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/background"
                         android:minHeight="50dp">
 
                         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/adViewWallet"
+                            android:id="@+id/adView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
                             android:layout_centerHorizontal="true"
                             ads:adSize="SMART_BANNER"
                             ads:adUnitId="@string/banner_ad_unit_id_test"></com.google.android.gms.ads.AdView>
-                        &lt;!&ndash; android:layout_alignParentBottom="true" &ndash;&gt;
-                    </RelativeLayout>-->
+                        <!-- android:layout_alignParentBottom="true" -->
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <LinearLayout
