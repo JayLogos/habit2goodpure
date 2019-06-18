@@ -142,11 +142,7 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
     @Override
     int getContentViewId() {
-        if (Applications.preference.getValue(Preference.USER_ID, "").equals("")) {
-            return R.layout.intro_gtrophy_and_gpoint;
-        } else {
-            return R.layout.activity_dashboard;
-        }
+        return R.layout.activity_dashboard;
     }
 
     @Override
@@ -212,15 +208,10 @@ public class DashboardActivity extends BaseActivity implements AsyncTaskComplete
 
         //activity = (MainActivity)getActivity();
 
-       /* toolbar = findViewById(R.id.habits_toolbar);
-        setSupportActionBar(toolbar);
-        actionbar = getSupportActionBar();
-        actionbar.setTitle(R.string.btn_nav_dashboard);
-*/
-        toolbar = findViewById(R.id.habits_toolbar);
-        setSupportActionBar(toolbar);
-        actionbar = getSupportActionBar();
-        actionbar.setTitle(R.string.btn_nav_dashboard);
+       toolbar = findViewById(R.id.habits_toolbar);
+       setSupportActionBar(toolbar);
+       actionbar = getSupportActionBar();
+       actionbar.setTitle(R.string.btn_nav_dashboard);
 
         setHorizontalSlide();
 
