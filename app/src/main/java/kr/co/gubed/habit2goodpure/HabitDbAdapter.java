@@ -1159,7 +1159,7 @@ public class HabitDbAdapter {
                 do {
                     for (int i=0 ; i<=period ; i++) {
                         plus1 = plus1LinkedList.get(i);
-                        Log.i(getClass().getName(), "PLUS1 cursor.getColumnIndex="+cursor.getString(cursor.getColumnIndex("day")));
+                        //Log.i(getClass().getName(), "PLUS1 cursor.getColumnIndex="+cursor.getString(cursor.getColumnIndex("day")));
                         if (plus1.getDay().equals(cursor.getString(cursor.getColumnIndex("day")))) {
                             plus1.setCount(cursor.getInt(cursor.getColumnIndex("count")));
                         }
